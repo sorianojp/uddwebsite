@@ -48,7 +48,7 @@ header {
 
   @media (pointer: coarse) and (hover: none) {
     header {
-      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+        background-color: #0B2447;
     }
 
     header video {
