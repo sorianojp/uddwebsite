@@ -70,14 +70,14 @@ header {
                         </div>
                         <div class="col-sm-6">
                             @if ($f instanceof App\Event)
-                                <a href="{{ route('events.show', $f->id) }}"> <span class="font-weight-bold">{{ $f->title }}</span></a><br>
+                                <a href="{{ route('events.show', $f->id) }}"> <span class="font-weight-bold h3">{{ $f->title }}</span></a><br>
                                     <span><i class="bi bi-calendar2-event"></i> Event</span><br>
                             @elseif ($f instanceof App\News)
-                                <a href="{{ route('news.show', $f->id) }}"> <span class="font-weight-bold">{{ $f->title }}</span></a><br>
+                                <a href="{{ route('news.show', $f->id) }}"> <span class="font-weight-bold h3">{{ $f->title }}</span></a><br>
                                     <span><i class="bi bi-newspaper"></i> News</span><br>
                             @endif
-                            <span><i class="bi bi-person"></i> {{ $f->user->name }}</span><br>
-                            <span><i class="bi bi-calendar"></i> {{ $f->created_at->format('Y-m-d') }}<p>
+                            <span class="h5"><i class="bi bi-person"></i> {{ $f->user->name }}</span><br>
+                            <span class="h5"><i class="bi bi-calendar"></i> {{ $f->created_at->format('Y-m-d') }}<p>
                         </div>
                     </div>
                 @endforeach
@@ -109,10 +109,10 @@ header {
                 @foreach ($news as $n)
                     <div class="col-sm-4">
                         <div class="row">
-                            <div class="col-sm-6 p-0">
+                            <div class="col-sm-12 p-0">
                                 <img src="/image/{{ $n->image }}" class="img-fluid">
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                                 <a href="{{ route('news.show', $n->id) }}"> <span class="font-weight-bold">{{ $n->title }}</span></a><br>
                                 <span><i class="bi bi-person"></i> {{ $n->user->name }}</span><br>
                                 <span><i class="bi bi-calendar"></i> {{ $n->created_at->format('Y-m-d') }}<p>
@@ -128,10 +128,10 @@ header {
                 @foreach ($events as $e)
                     <div class="col-sm-4">
                         <div class="row">
-                            <div class="col-sm-6 p-0">
+                            <div class="col-sm-12 p-0">
                                 <img src="/image/{{ $e->image }}" class="img-fluid">
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                                 <a href="{{ route('events.show', $e->id) }}"> <span class="font-weight-bold">{{ $e->title }}</span></a><br>
                                 <span><i class="bi bi-person"></i> {{ $e->user->name }}</span><br>
                                 <span><i class="bi bi-calendar"></i> {{ $e->created_at->format('Y-m-d') }}<p>
