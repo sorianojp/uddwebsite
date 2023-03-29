@@ -97,9 +97,6 @@ header {
                             </div>
                         </div>
                     @endforeach
-                        <div>
-                            <a href="{{ route('allads') }}">See All Ads</a>
-                        </div>
                 </div>
             </div>
         </div>
