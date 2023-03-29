@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Auth::routes();
+Auth::routes(['register' => false]);
+// Auth::routes();
 Route::get('/', 'WelcomeController@welcome')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('news', 'NewsController');
