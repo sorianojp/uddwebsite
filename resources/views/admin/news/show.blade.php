@@ -6,7 +6,7 @@
         <h2 class="font-weight-bold">{{ $news->title }}</h2>
         <p>By {{ $news->user->name }}  {{ $news->created_at->format('Y-m-d') }}</p>
         <img src="/image/{{ $news->image }}" class="img-fluid">
-        <p class="text-justify">{!! $news->content !!}</p>
+        <p class="text-justify img-fluid">{!! $news->content !!}</p>
     </div>
 </div>
 </div>
