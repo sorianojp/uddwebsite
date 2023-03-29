@@ -49,6 +49,6 @@
     $(document).ready(function() {
         $('#summernote').summernote();
     });
-  </script>
+</script>
 @endsection
 @endsection
