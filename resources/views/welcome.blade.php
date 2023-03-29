@@ -107,9 +107,9 @@ header {
             <h1 class="mb-3">News <span class="h5"><a href="{{ route('allnews') }}">See All News</a></span></h1>
             <div class="row">
                 @foreach ($news as $n)
-                    <div class="col-sm-4 mx-1">
+                    <div class="col-sm-4">
                         <div class="row">
-                            <div class="col-sm-12 p-0">
+                            <div class="col-sm-12">
                                 <img src="/image/{{ $n->image }}" class="img-fluid">
                             </div>
                             <div class="col-sm-12">
@@ -126,9 +126,9 @@ header {
             <h1 class="mb-3">Events <span class="h5"><a href="{{ route('allevents') }}">See All Events</a></span></h1>
             <div class="row">
                 @foreach ($events as $e)
-                    <div class="col-sm-4 mx-1">
+                    <div class="col-sm-4">
                         <div class="row">
-                            <div class="col-sm-12 p-0">
+                            <div class="col-sm-12">
                                 <img src="/image/{{ $e->image }}" class="img-fluid">
                             </div>
                             <div class="col-sm-12">
