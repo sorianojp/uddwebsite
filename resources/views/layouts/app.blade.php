@@ -17,7 +17,9 @@
         <main>
             @yield('content')
         </main>
+        @guest
         @include('layouts.footer')
+        @endguest
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
