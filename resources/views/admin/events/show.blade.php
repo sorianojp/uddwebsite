@@ -6,8 +6,14 @@
         <h2 class="font-weight-bold">{{ $event->title }}</h2>
         <p>By {{ $event->user->name }}  {{ $event->created_at->format('Y-m-d') }}</p>
         <img src="/image/{{ $event->image }}" class="img-fluid">
-        <p class="text-justify">{!! $event->content !!}</p>
+        <div class="text-justify" id="content">{!! $event->content !!}</div>
     </div>
 </div>
 </div>
+@section('scripts')
+<script>
+    const img = document.querySelector('#content img');
+    img.classList.add('img-fluid');
+</script>
+@endsection
 @endsection
