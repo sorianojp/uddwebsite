@@ -22,6 +22,11 @@ class WelcomeController extends Controller
         return view('welcome', compact('news', 'events', 'featured', 'tops', 'ads'));
     }
 
+    public function partners()
+    {
+        return view('partners');
+    }
+
     public function programs()
     {
         $news = News::inRandomOrder()->get();

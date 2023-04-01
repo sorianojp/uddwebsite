@@ -29,6 +29,7 @@ Route::get('/allevents', 'EventController@allevents')->name('allevents');
 Route::resource('departments','DepartmentController');
 Route::resource('departments.courses', 'CourseController')->shallow();
 Route::get('/programs', 'WelcomeController@programs')->name('programs');
+Route::get('/partners', 'WelcomeController@partners')->name('partners');
 Route::resource('tops', 'TopController');
 Route::resource('ads', 'AdController');
 Route::delete('/unfeaturead/{ad}',  'AdController@unfeaturead')->name('unfeaturead');
