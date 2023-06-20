@@ -16,7 +16,7 @@ class CreateTopsTable extends Migration
         Schema::create('tops', function (Blueprint $table) {
             $table->id();
             $table->longText('name');
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }

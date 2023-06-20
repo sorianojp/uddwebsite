@@ -17,7 +17,7 @@ class CreateAdsTable extends Migration
             $table->id();
             $table->string('title');
             $table->longText('content');
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->foreignId('user_id');
             $table->enum('featured', [0, 1])->default(0);
             $table->timestamps();
