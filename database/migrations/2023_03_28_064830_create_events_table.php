@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->string('title');
             $table->longText('content');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->foreignId('user_id');
             $table->enum('featured', [0, 1])->default(0);
             $table->timestamps();
