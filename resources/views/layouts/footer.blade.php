@@ -42,8 +42,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 my-2">
-                    <a href="http://uddonlineregistration.cdd.edu.ph/" class="btn btn-light d-block w-100"
-                        target="_blank">
+                    <a href="https://udd.steps.com.ph/login" class="btn btn-light d-block w-100" target="_blank">
                         <span><i class="bi bi-link"></i> </span> <span>STEP LMS</span>
                     </a>
                 </div>
