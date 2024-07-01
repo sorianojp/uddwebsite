@@ -202,7 +202,7 @@
                         </div>
                         <div class="col-md-6 my-3">
                             <div class="h-100 p-5 bg-light border rounded-3">
-                                <h2>Quality Policy</h2>
+                                <h2>EOMS Policy</h2>
                                 <p>
                                     The Universidad de Dagupan shall be known as an educational institution that discovers
                                     and develops God-given gifts to help achieve man’s personal fulfillment and community
