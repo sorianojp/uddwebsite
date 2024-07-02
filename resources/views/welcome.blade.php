@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <a href="{{ route('news.show', $n->id) }}"> <span
-                                            class="font-weight-bold">{{ $n->title }}</span></a><br>
+                                            class="font-weight-bold text-truncate">{{ $n->title }}</span></a><br>
                                     <span><i class="bi bi-person"></i> {{ $n->user->name }}</span><br>
                                     <span><i class="bi bi-calendar"></i> {{ $n->created_at->format('Y-m-d') }}<p>
                                 </div>
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <a href="{{ route('events.show', $e->id) }}"> <span
-                                            class="font-weight-bold">{{ $e->title }}</span></a><br>
+                                            class="font-weight-bold text-truncate">{{ $e->title }}</span></a><br>
                                     <span><i class="bi bi-person"></i> {{ $e->user->name }}</span><br>
                                     <span><i class="bi bi-calendar"></i> {{ $e->created_at->format('Y-m-d') }}<p>
                                 </div>
@@ -116,11 +116,11 @@
                         <div class="col-sm-6">
                             @if ($f instanceof App\Event)
                                 <a href="{{ route('events.show', $f->id) }}"> <span
-                                        class="font-weight-bold">{{ $f->title }}</span></a><br>
+                                        class="font-weight-bold text-truncate">{{ $f->title }}</span></a><br>
                                 <span><i class="bi bi-calendar2-event"></i> Event</span><br>
                             @elseif ($f instanceof App\News)
                                 <a href="{{ route('news.show', $f->id) }}"> <span
-                                        class="font-weight-bold">{{ $f->title }}</span></a><br>
+                                        class="font-weight-bold text-truncate">{{ $f->title }}</span></a><br>
                                 <span><i class="bi bi-newspaper"></i> News</span><br>
                             @endif
                             <span><i class="bi bi-person"></i> {{ $f->user->name }}</span><br>
@@ -139,7 +139,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <a href="{{ route('ads.show', $a->id) }}"> <span
-                                        class="font-weight-bold">{{ $a->title }}</span></a><br>
+                                        class="font-weight-bold text-truncate">{{ $a->title }}</span></a><br>
                                 <span><i class="bi bi-person"></i> {{ $a->user->name }}</span><br>
                                 <span><i class="bi bi-calendar"></i> {{ $a->created_at->format('Y-m-d') }}<p>
                             </div>
