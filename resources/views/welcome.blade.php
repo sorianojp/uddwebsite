@@ -255,7 +255,7 @@
                 <div class="col-sm-6">
                     <h1>Our Top Notchers</h1>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators mt-6">
+                        <ol class="carousel-indicators">
                             @foreach ($tops as $key => $t)
                                 <li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}"
                                     @if ($key == 0) class="active" @endif></li>
