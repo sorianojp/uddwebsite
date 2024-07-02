@@ -152,41 +152,12 @@
     <section class="bg-dark p-5 text-white">
         <div class="container">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-12 text-center">
                     <h1>Choose UdD <br>Home of Topnotchers</h1>
                     <p>Over the past 36 years, Colegio de Dagupan has unarguably set the standards in providing quality
                         education to the people of Dagupan and its neighboring towns. it is dedicated to live by its mission
                         statement, stand by its philosophy and, preserve a steadfast commitment to Excellence in Education.
                     </p>
-                </div>
-                <div class="col-sm-4">
-                    <h1>Our Top Notchers</h1>
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            @foreach ($tops as $key => $t)
-                                <li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}"
-                                    @if ($key == 0) class="active" @endif></li>
-                            @endforeach
-                        </ol>
-                        <div class="carousel-inner">
-                            @foreach ($tops as $key => $t)
-                                <div class="carousel-item @if ($key == 0) active @endif">
-                                    <img class="d-block w-100" src="/image/{{ $t->image }}" alt="{{ $t->name }}">
-                                    <div class="carousel-caption">
-                                        <h3 class="shadow">{{ $t->name }}</h3>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
