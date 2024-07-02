@@ -250,7 +250,7 @@
         </div>
     </section>
     <section class="bg-light p-5">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
             <div class="row">
                 <div class="col-sm-6">
                     <h1>Our Top Notchers</h1>
