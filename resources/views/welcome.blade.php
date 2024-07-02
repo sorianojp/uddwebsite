@@ -61,51 +61,6 @@
     @include('layouts.header')
     <section class="p-5">
         <div class="row">
-            <div class="col-sm-8">
-                <h1 class="mb-3">Featured News and Events</h1>
-                @foreach ($featured as $f)
-                    <div class="row my-3 border-bottom mr-2">
-                        <div class="col-sm-6 p-0">
-                            <img src="/image/{{ $f->image }}" class="img-fluid">
-                        </div>
-                        <div class="col-sm-6">
-                            @if ($f instanceof App\Event)
-                                <a href="{{ route('events.show', $f->id) }}"> <span
-                                        class="font-weight-bold h3">{{ $f->title }}</span></a><br>
-                                <span><i class="bi bi-calendar2-event"></i> Event</span><br>
-                            @elseif ($f instanceof App\News)
-                                <a href="{{ route('news.show', $f->id) }}"> <span
-                                        class="font-weight-bold h3">{{ $f->title }}</span></a><br>
-                                <span><i class="bi bi-newspaper"></i> News</span><br>
-                            @endif
-                            <span class="h5"><i class="bi bi-person"></i> {{ $f->user->name }}</span><br>
-                            <span class="h5"><i class="bi bi-calendar"></i> {{ $f->created_at->format('Y-m-d') }}<p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            <div class="col-sm-4">
-                <div class="row">
-                    <h1 class="mb-3">Ads <span class="h5"><a href="{{ route('allads') }}">See All Ads</a></span></h1>
-                    @foreach ($ads as $a)
-                        <div class="row my-3 border-bottom mr-2">
-                            <div class="col-sm-6 p-0">
-                                <img src="/image/{{ $a->image }}" class="img-fluid">
-                            </div>
-                            <div class="col-sm-6">
-                                <a href="{{ route('ads.show', $a->id) }}"> <span
-                                        class="font-weight-bold">{{ $a->title }}</span></a><br>
-                                <span><i class="bi bi-person"></i> {{ $a->user->name }}</span><br>
-                                <span><i class="bi bi-calendar"></i> {{ $a->created_at->format('Y-m-d') }}<p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="p-5">
-        <div class="row">
             <div class="col-sm-6">
                 <h1 class="mb-3">News <span class="h5"><a href="{{ route('allnews') }}">See All News</a></span></h1>
                 <div class="row">
@@ -142,6 +97,51 @@
                                     <span><i class="bi bi-person"></i> {{ $e->user->name }}</span><br>
                                     <span><i class="bi bi-calendar"></i> {{ $e->created_at->format('Y-m-d') }}<p>
                                 </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="p-5">
+        <div class="row">
+            <div class="col-sm-8">
+                <h1 class="mb-3">Featured News and Events</h1>
+                @foreach ($featured as $f)
+                    <div class="row my-3 border-bottom mr-2">
+                        <div class="col-sm-6 p-0">
+                            <img src="/image/{{ $f->image }}" class="img-fluid">
+                        </div>
+                        <div class="col-sm-6">
+                            @if ($f instanceof App\Event)
+                                <a href="{{ route('events.show', $f->id) }}"> <span
+                                        class="font-weight-bold h3">{{ $f->title }}</span></a><br>
+                                <span><i class="bi bi-calendar2-event"></i> Event</span><br>
+                            @elseif ($f instanceof App\News)
+                                <a href="{{ route('news.show', $f->id) }}"> <span
+                                        class="font-weight-bold h3">{{ $f->title }}</span></a><br>
+                                <span><i class="bi bi-newspaper"></i> News</span><br>
+                            @endif
+                            <span class="h5"><i class="bi bi-person"></i> {{ $f->user->name }}</span><br>
+                            <span class="h5"><i class="bi bi-calendar"></i> {{ $f->created_at->format('Y-m-d') }}<p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <h1 class="mb-3">Ads <span class="h5"><a href="{{ route('allads') }}">See All Ads</a></span></h1>
+                    @foreach ($ads as $a)
+                        <div class="row my-3 border-bottom mr-2">
+                            <div class="col-sm-6 p-0">
+                                <img src="/image/{{ $a->image }}" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="{{ route('ads.show', $a->id) }}"> <span
+                                        class="font-weight-bold">{{ $a->title }}</span></a><br>
+                                <span><i class="bi bi-person"></i> {{ $a->user->name }}</span><br>
+                                <span><i class="bi bi-calendar"></i> {{ $a->created_at->format('Y-m-d') }}<p>
                             </div>
                         </div>
                     @endforeach
@@ -252,7 +252,7 @@
     <section class="bg-light p-5">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-6">
                     <h1>Our Top Notchers</h1>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
