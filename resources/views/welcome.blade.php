@@ -266,7 +266,7 @@
                                 <div class="carousel-item @if ($key == 0) active @endif">
                                     <img class="d-block w-100" src="/image/{{ $t->image }}"
                                         alt="{{ $t->name }}">
-                                    <div class="carousel-caption">
+                                    <div class="carousel-caption p-5 bg-dark">
                                         <h3>{{ $t->name }}</h3>
                                     </div>
                                 </div>
