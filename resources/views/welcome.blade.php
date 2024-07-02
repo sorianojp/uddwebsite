@@ -152,14 +152,14 @@
     <section class="bg-dark p-5 text-white">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-8">
                     <h1>Choose UdD <br>Home of Topnotchers</h1>
                     <p>Over the past 36 years, Colegio de Dagupan has unarguably set the standards in providing quality
                         education to the people of Dagupan and its neighboring towns. it is dedicated to live by its mission
                         statement, stand by its philosophy and, preserve a steadfast commitment to Excellence in Education.
                     </p>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <h1>Our Top Notchers</h1>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -171,7 +171,7 @@
                         <div class="carousel-inner">
                             @foreach ($tops as $key => $t)
                                 <div class="carousel-item @if ($key == 0) active @endif">
-                                    <img class="d-block w-80" src="/image/{{ $t->image }}" alt="{{ $t->name }}">
+                                    <img class="d-block w-100" src="/image/{{ $t->image }}" alt="{{ $t->name }}">
                                     <div class="carousel-caption">
                                         <h3>{{ $t->name }}</h3>
                                     </div>
