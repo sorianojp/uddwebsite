@@ -106,7 +106,7 @@
     </section>
     <section class="p-5">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <h1 class="mb-3">Featured News and Events</h1>
                 @foreach ($featured as $f)
                     <div class="row my-3 border-bottom mr-2">
@@ -129,7 +129,7 @@
                     </div>
                 @endforeach
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <div class="row">
                     <h1 class="mb-3">Ads <span class="h5"><a href="{{ route('allads') }}">See All Ads</a></span></h1>
                     @foreach ($ads as $a)
