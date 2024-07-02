@@ -116,15 +116,15 @@
                         <div class="col-sm-6">
                             @if ($f instanceof App\Event)
                                 <a href="{{ route('events.show', $f->id) }}"> <span
-                                        class="font-weight-bold h3">{{ $f->title }}</span></a><br>
+                                        class="font-weight-bold">{{ $f->title }}</span></a><br>
                                 <span><i class="bi bi-calendar2-event"></i> Event</span><br>
                             @elseif ($f instanceof App\News)
                                 <a href="{{ route('news.show', $f->id) }}"> <span
-                                        class="font-weight-bold h3">{{ $f->title }}</span></a><br>
+                                        class="font-weight-bold">{{ $f->title }}</span></a><br>
                                 <span><i class="bi bi-newspaper"></i> News</span><br>
                             @endif
-                            <span class="h5"><i class="bi bi-person"></i> {{ $f->user->name }}</span><br>
-                            <span class="h5"><i class="bi bi-calendar"></i> {{ $f->created_at->format('Y-m-d') }}<p>
+                            <span><i class="bi bi-person"></i> {{ $f->user->name }}</span><br>
+                            <span><i class="bi bi-calendar"></i> {{ $f->created_at->format('Y-m-d') }}<p>
                         </div>
                     </div>
                 @endforeach
