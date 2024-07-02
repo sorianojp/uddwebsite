@@ -171,7 +171,7 @@
                         <div class="carousel-inner">
                             @foreach ($tops as $key => $t)
                                 <div class="carousel-item @if ($key == 0) active @endif">
-                                    <img class="d-block w-100" src="/image/{{ $t->image }}" alt="{{ $t->name }}">
+                                    <img class="d-block w-80" src="/image/{{ $t->image }}" alt="{{ $t->name }}">
                                     <div class="carousel-caption">
                                         <h3>{{ $t->name }}</h3>
                                     </div>
