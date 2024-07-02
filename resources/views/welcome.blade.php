@@ -173,7 +173,7 @@
                                 <div class="carousel-item @if ($key == 0) active @endif">
                                     <img class="d-block w-100" src="/image/{{ $t->image }}" alt="{{ $t->name }}">
                                     <div class="carousel-caption">
-                                        <h3>{{ $t->name }}</h3>
+                                        <h3 class="shadow">{{ $t->name }}</h3>
                                     </div>
                                 </div>
                             @endforeach
