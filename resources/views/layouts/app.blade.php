@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     @yield('styles')
 </head>
+
 <body>
     <div id="app">
         @include('layouts.nav')
@@ -18,7 +20,7 @@
             @yield('content')
         </main>
         @guest
-        @include('layouts.footer')
+            @include('layouts.footer')
         @endguest
     </div>
     <!-- Scripts -->
@@ -26,4 +28,5 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     @yield('scripts')
 </body>
+
 </html>
