@@ -35,3 +35,6 @@ Route::resource('ads', 'AdController');
 Route::delete('/unfeaturead/{ad}',  'AdController@unfeaturead')->name('unfeaturead');
 Route::get('/featuread/{ad}',  'AdController@featuread')->name('featuread');
 Route::get('/allads', 'AdController@allads')->name('allads');
+Route::resource('categories', 'CategoryController');
+Route::get('/sdgs', 'WelcomeController@sdgs')->name('sdgs');
+Route::get('/sdgs/{category}', 'WelcomeController@sdgshow')->name('sdgs.show');

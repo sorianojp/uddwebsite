@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\News;
 use App\Event;
+use App\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -30,7 +31,8 @@ class NewsController extends Controller
 
     public function create()
     {
-        return view('admin.news.create');
+        $categories = Category::all();
+        return view('admin.news.create', compact('categories'));
     }
 
     public function store(Request $request)
@@ -38,6 +40,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'content' => 'required',
+            'category_id' => 'nullable',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048|dimensions:width=1000,height=600',
         ]);
 

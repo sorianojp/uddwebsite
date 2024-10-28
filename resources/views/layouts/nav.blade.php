@@ -1,9 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img class="img-fluid" src="{{ asset('images/logo.png') }}" width="30" height="30"> Universidad de Dagupan
+            <img class="img-fluid" src="{{ asset('images/logo.png') }}" width="30" height="30"> Universidad de
+            Dagupan
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -29,6 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('partners') }}">Partners</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('sdgs') }}">SDG</a>
+                    </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
@@ -38,6 +43,9 @@
                         </li>
                     @endif --}}
                 @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('ads.index') }}">Ads</a>
                     </li>
@@ -54,13 +62,14 @@
                         <a class="nav-link" href="{{ route('tops.index') }}">Topnotchers</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
+                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>

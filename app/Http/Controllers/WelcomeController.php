@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\News;
 use App\Event;
 use App\Department;
+use App\Category;
 use App\Top;
 use App\Ad;
 use Illuminate\Http\Request;
@@ -33,5 +34,15 @@ class WelcomeController extends Controller
         $events = Event::inRandomOrder()->get();
         $programs = Department::all();
         return view('programs',compact('programs', 'events', 'news'));
+    }
+
+    public function sdgs()
+    {
+        $categories = Category::all();
+        return view('sdgs',compact('categories'))->with('i');
+    }
+    public function sdgshow(Category $category)
+    {
+        return view('sdgshow',compact('category'));
     }
 }

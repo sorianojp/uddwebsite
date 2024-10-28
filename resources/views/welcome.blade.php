@@ -62,7 +62,7 @@
     <section class="p-5">
         <div class="row">
             <div class="col-sm-6">
-                <h1 class="mb-3">News <span class="h5"><a href="{{ route('allnews') }}">See All News</a></span></h1>
+                <h1 class="mb-3"><a href="{{ route('allnews') }}">News</a></h1>
                 <div class="row">
                     @foreach ($news as $n)
                         <div class="col-sm-4">
@@ -71,10 +71,19 @@
                                     <img src="/image/{{ $n->image }}" class="img-fluid">
                                 </div>
                                 <div class="col-sm-12">
-                                    <a href="{{ route('news.show', $n->id) }}"> <span
-                                            class="font-weight-bold">{{ $n->title }}</span></a><br>
-                                    <span><i class="bi bi-person"></i> {{ $n->user->name }}</span><br>
-                                    <span><i class="bi bi-calendar"></i> {{ $n->created_at->format('Y-m-d') }}<p>
+                                    <a href="{{ route('news.show', $n->id) }}">
+                                        <span class="font-weight-bold h5">{{ $n->title }}</span>
+                                    </a><br>
+                                    @if ($n->category)
+                                        <a href="{{ route('sdgs.show', $n->category->id) }}">
+                                            <span>{{ $n->category->name }}</span>
+                                        </a>
+                                    @else
+                                        <span>N/A</span>
+                                    @endif
+                                    <br>
+                                    <i class="bi bi-person-square mr-2"> {{ $n->user->name }}</i>
+                                    <i class="bi bi-calendar-fill"> {{ $n->created_at->format('Y-m-d') }}</i>
                                 </div>
                             </div>
                         </div>
@@ -82,8 +91,7 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <h1 class="mb-3">Events <span class="h5"><a href="{{ route('allevents') }}">See All Events</a></span>
-                </h1>
+                <h1 class="mb-3"><a href="{{ route('allevents') }}">Events</a></h1>
                 <div class="row">
                     @foreach ($events as $e)
                         <div class="col-sm-4">
@@ -92,10 +100,19 @@
                                     <img src="/image/{{ $e->image }}" class="img-fluid">
                                 </div>
                                 <div class="col-sm-12">
-                                    <a href="{{ route('events.show', $e->id) }}"> <span
-                                            class="font-weight-bold">{{ $e->title }}</span></a><br>
-                                    <span><i class="bi bi-person"></i> {{ $e->user->name }}</span><br>
-                                    <span><i class="bi bi-calendar"></i> {{ $e->created_at->format('Y-m-d') }}<p>
+                                    <a href="{{ route('events.show', $e->id) }}">
+                                        <span class="font-weight-bold h5">{{ $e->title }}</span>
+                                    </a><br>
+                                    @if ($e->category)
+                                        <a href="{{ route('sdgs.show', $e->category->id) }}">
+                                            <span>{{ $e->category->name }}</span>
+                                        </a>
+                                    @else
+                                        <span>N/A</span>
+                                    @endif
+                                    <br>
+                                    <i class="bi bi-person-square mr-2"> {{ $e->user->name }}</i>
+                                    <i class="bi bi-calendar-fill"> {{ $e->created_at->format('Y-m-d') }}</i>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +124,9 @@
     <section class="p-5">
         <div class="row">
             <div class="col-sm-6">
-                <h1 class="mb-3">Featured News and Events</h1>
+                <div class="row">
+                    <h1 class="mb-3">Featured News and Events</h1>
+                </div>
                 @foreach ($featured as $f)
                     <div class="row my-3 border-bottom mr-2">
                         <div class="col-sm-6 p-0">
@@ -116,22 +135,24 @@
                         <div class="col-sm-6">
                             @if ($f instanceof App\Event)
                                 <a href="{{ route('events.show', $f->id) }}"> <span
-                                        class="font-weight-bold">{{ $f->title }}</span></a><br>
-                                <span><i class="bi bi-calendar2-event"></i> Event</span><br>
+                                        class="font-weight-bold h5">{{ $f->title }}</span></a><br>
+                                <i class="bi bi-calendar2-event"> Event</i><br>
                             @elseif ($f instanceof App\News)
                                 <a href="{{ route('news.show', $f->id) }}"> <span
-                                        class="font-weight-bold">{{ $f->title }}</span></a><br>
-                                <span><i class="bi bi-newspaper"></i> News</span><br>
+                                        class="font-weight-bold h5">{{ $f->title }}</span></a><br>
+                                <i class="bi bi-newspaper"> News</i><br>
                             @endif
-                            <span><i class="bi bi-person"></i> {{ $f->user->name }}</span><br>
-                            <span><i class="bi bi-calendar"></i> {{ $f->created_at->format('Y-m-d') }}<p>
+                            <i class="bi bi-person-square"> {{ $f->user->name }}</i><br>
+                            <i class="bi bi-calendar-fill"> {{ $f->created_at->format('Y-m-d') }}</i>
                         </div>
                     </div>
                 @endforeach
             </div>
             <div class="col-sm-6">
                 <div class="row">
-                    <h1 class="mb-3">Ads <span class="h5"><a href="{{ route('allads') }}">See All Ads</a></span></h1>
+                    <h1 class="mb-3"><a href="{{ route('allads') }}">Ads</a></h1>
+                </div>
+                <div class="row">
                     @foreach ($ads as $a)
                         <div class="row my-3 border-bottom mr-2">
                             <div class="col-sm-6 p-0">
@@ -140,8 +161,8 @@
                             <div class="col-sm-6">
                                 <a href="{{ route('ads.show', $a->id) }}"> <span
                                         class="font-weight-bold">{{ $a->title }}</span></a><br>
-                                <span><i class="bi bi-person"></i> {{ $a->user->name }}</span><br>
-                                <span><i class="bi bi-calendar"></i> {{ $a->created_at->format('Y-m-d') }}<p>
+                                <span><i class="bi bi-person-square"></i> {{ $a->user->name }}</span><br>
+                                <span><i class="bi bi-calendar-fill"></i> {{ $a->created_at->format('Y-m-d') }}<p>
                             </div>
                         </div>
                     @endforeach
