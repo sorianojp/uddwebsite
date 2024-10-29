@@ -1,10 +1,13 @@
+@section('styles')
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+@endsection
 <header>
     <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
     <div class="overlay"></div>
     <!-- The HTML5 video element that will create the background video on the header -->
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    {{-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
         <source src="{{ asset('videos/header.mp4') }}" type="video/mp4">
-    </video>
+    </video> --}}
     <!-- The header content -->
     <div class="container h-100">
         <div class="d-flex h-100 text-center align-items-center">
