@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <section class="p-5">
-        <h5 class="text-uppercase bg-primary p-2 rounded-lg">{{ $category->name }} | News and Events</h5>
+        <h5 class="text-uppercase bg-primary p-2 rounded-lg text-white">{{ $category->name }} | News and Events</h5>
         <div class="row">
             @forelse ($category->news as $n)
                 <div class="col-sm-6 col-md-4 col-lg-3">
