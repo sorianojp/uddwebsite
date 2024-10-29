@@ -3,14 +3,16 @@
     <div class="container-fluid">
         <div class="row my-5 mx-5">
             <div class="col-sm-12">
-                <h3>{{ $category->name }} | News and Events</h3>
-
+                <h5 class="text-uppercase bg-primary p-2 rounded-lg">{{ $category->name }} | News and Events</h5>
                 <div class="row">
                     @forelse ($category->news as $n)
-                        <div class="border p-2 my-1 mx-1 bg-secondary text-white">
-                            <a href="{{ route('news.show', $n->id) }}" class="text-white">
-                                <span class="h5">{{ $n->title }}</span>
-                            </a>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div>
+                                <img src="/image/{{ $n->image }}" class="img-fluid rounded-top">
+                            </div>
+                            <div class="text-truncate">
+                                <a href="{{ route('news.show', $n->id) }}">{{ $n->title }}</a>
+                            </div>
                         </div>
                     @empty
                         <div class="border p-2 my-1 mx-1 bg-secondary text-white">
@@ -21,10 +23,13 @@
 
                 <div class="row">
                     @forelse ($category->events as $e)
-                        <div class="border p-2 my-1 mx-1 bg-secondary text-white">
-                            <a href="{{ route('events.show', $e->id) }}" class="text-white">
-                                <span class="h5">{{ $e->title }}</span>
-                            </a>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div>
+                                <img src="/image/{{ $e->image }}" class="img-fluid rounded-top">
+                            </div>
+                            <div class="text-truncate">
+                                <a href="{{ route('events.show', $e->id) }}">{{ $e->title }}</a>
+                            </div>
                         </div>
                     @empty
                         <div class="border p-2 my-1 mx-1 bg-secondary text-white">
