@@ -1,4 +1,4 @@
-<section class="p-5 bg-dark text-white">
+<section class="p-5 bg-primary text-white">
     <div class="row">
         <div class="col-sm-6">
             <h3 class="mb-3">Contact Us</h3>

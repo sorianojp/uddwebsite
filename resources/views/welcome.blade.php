@@ -1,6 +1,10 @@
-@auth
-    @include('home')
-@endauth
-@guest
-    @include('guest')
-@endguest
+@extends('layouts.app')
+@section('content')
+    @auth
+        @include('home')
+    @endauth
+    @guest
+        @include('layouts.header')
+        @include('guest')
+    @endguest
+@endsection

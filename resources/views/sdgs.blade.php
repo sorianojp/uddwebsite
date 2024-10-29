@@ -1,23 +1,19 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container-fluid">
-        <div class="row my-5 mx-5">
-            <div class="col-sm-12">
-                <div class="row">
-                    <h3>Sustainable Development Goals</h3>
+    <section class="p-5">
+        <h5 class="text-uppercase bg-primary p-2 rounded-lg">
+            <a href="{{ route('allads') }}" class="text-white">
+                Sustainable Development Goals
+            </a>
+        </h5>
+        <div class="row">
+            @foreach ($categories as $c)
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div>
+                        <a href="{{ route('sdgs.show', $c) }}">{{ ++$i }} - {{ $c->name }}</a>
+                    </div>
                 </div>
-                <div class="row">
-                    @foreach ($categories as $c)
-                        <div class="border p-2 my-1 mx-1 bg-secondary text-white">
-                            <div>
-                                <span class="h2 font-weight-bold">{{ ++$i }}</span>
-                                <a href="{{ route('sdgs.show', $c) }}" class="text-white"><span
-                                        class="h5">{{ $c->name }}</span></a>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
+            @endforeach
         </div>
-    </div>
+    </section>
 @endsection

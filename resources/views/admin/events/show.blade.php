@@ -4,7 +4,7 @@
         <div class="row justify-content-center my-5">
             <div class="col-sm-8">
                 <h2 class="font-weight-bold">{{ $event->title }}</h2>
-                <span>{{ $event->user->name }} | {{ $event->created_at->format('Y-m-d') }}</span> |
+                <span>{{ $event->user->name }} | {{ $event->created_at->format('F j, Y') }}</span> |
                 @if ($event->category)
                     <a href="{{ route('sdgs.show', $event->category->id) }}">
                         <span>{{ $event->category->name }}</span>

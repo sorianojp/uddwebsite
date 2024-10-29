@@ -4,7 +4,7 @@
         <div class="row justify-content-center my-5">
             <div class="col-sm-8">
                 <h2 class="font-weight-bold">{{ $news->title }}</h2>
-                <span>{{ $news->user->name }} | {{ $news->created_at->format('Y-m-d') }}</span> |
+                <span>{{ $news->user->name }} | {{ $news->created_at->format('F j, Y') }}</span> |
                 @if ($news->category)
                     <a href="{{ route('sdgs.show', $news->category->id) }}">
                         <span>{{ $news->category->name }}</span>

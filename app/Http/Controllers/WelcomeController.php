@@ -13,14 +13,14 @@ class WelcomeController extends Controller
 {
     public function welcome()
     {
-        $featured = collect();
-        $featured = $featured->merge(News::where('featured', '=', '1')->limit(3)->get());
-        $featured = $featured->merge(Event::where('featured', '=', '1')->limit(3)->get());
-        $news = News::latest()->take(3)->get();
-        $events = Event::latest()->take(3)->get();
+
+        $fnews = News::where('featured', 1)->limit(4)->get();
+        $fevents = Event::where('featured', 1)->limit(4)->get();
+        $news = News::latest()->take(4)->get();
+        $events = Event::latest()->take(4)->get();
         $ads = Ad::where('featured', '=', '1')->limit(6)->get();
         $tops = Top::all();
-        return view('welcome', compact('news', 'events', 'featured', 'tops', 'ads'));
+        return view('welcome', compact('news', 'events', 'fnews', 'fevents', 'tops', 'ads'));
     }
 
     public function partners()
@@ -30,10 +30,8 @@ class WelcomeController extends Controller
 
     public function programs()
     {
-        $news = News::inRandomOrder()->get();
-        $events = Event::inRandomOrder()->get();
         $programs = Department::all();
-        return view('programs',compact('programs', 'events', 'news'));
+        return view('programs',compact('programs'));
     }
 
     public function sdgs()
