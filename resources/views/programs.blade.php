@@ -3,7 +3,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-sm-12">
-                <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Programs Offerings</h5>
+                <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Program Offerings</h5>
                 <div class="accordion">
                     @foreach ($programs as $p)
                         <div>
