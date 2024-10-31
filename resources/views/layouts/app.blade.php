@@ -30,6 +30,10 @@
             object-fit: cover;
             /* Ensure the image maintains its aspect ratio and crops if needed */
         }
+
+        .content-container p img {
+            width: 300px !important;
+        }
     </style>
     @yield('styles')
 </head>
