@@ -34,8 +34,6 @@
         .content-container {
             width: 100%;
             /* Let the width auto-fit the container */
-            height: 400px;
-            /* Fixed height */
             overflow: hidden;
             /* Hide any overflow */
         }
