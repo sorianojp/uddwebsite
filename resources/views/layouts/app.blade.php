@@ -32,12 +32,7 @@
         }
 
         .content-container p img {
-            width: 100%;
-            /* Make the image take up the full width */
-            height: 100%;
-            /* Fill the height (400px) */
-            object-fit: cover;
-            /* Ensure the image maintains its aspect ratio and crops if needed */
+            width: 50%;
         }
     </style>
     @yield('styles')
