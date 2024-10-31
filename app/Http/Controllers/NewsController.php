@@ -41,7 +41,7 @@ class NewsController extends Controller
             'title' => 'required',
             'content' => 'required',
             'category_id' => 'nullable',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048|dimensions:width=1000,height=600',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $input = $request->all();
