@@ -31,7 +31,7 @@
             /* Ensure the image maintains its aspect ratio and crops if needed */
         }
 
-        .content-container img {
+        .content-container p img {
             width: 100%;
             /* Make the image take the full width of the container */
             min-width: 100%;
