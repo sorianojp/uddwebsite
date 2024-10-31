@@ -31,13 +31,6 @@
             /* Ensure the image maintains its aspect ratio and crops if needed */
         }
 
-        .content-container {
-            width: 100%;
-            /* Let the width auto-fit the container */
-            overflow: hidden;
-            /* Hide any overflow */
-        }
-
         .content-container p img {
             width: 100%;
             /* Make the image take up the full width */
