@@ -31,19 +31,22 @@
             /* Ensure the image maintains its aspect ratio and crops if needed */
         }
 
+        .content-container {
+            width: 100%;
+            /* Let the width auto-fit the container */
+            height: 400px;
+            /* Fixed height */
+            overflow: hidden;
+            /* Hide any overflow */
+        }
+
         .content-container p img {
             width: 100%;
-            /* Make the image take the full width of the container */
-            min-width: 100%;
-            /* Maximum width for large screens */
-            height: 400px;
-            /* Fix the height to 400px */
+            /* Make the image take up the full width */
+            height: 100%;
+            /* Fill the height (400px) */
             object-fit: cover;
             /* Ensure the image maintains its aspect ratio and crops if needed */
-            display: block;
-            /* Ensure the image behaves as a block-level element */
-            margin: 0 auto;
-            /* Center the image if it's smaller than the container */
         }
     </style>
     @yield('styles')
