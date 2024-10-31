@@ -34,6 +34,8 @@
         .content-container img {
             width: 100%;
             /* Make the image take the full width of the container */
+            min-width: 100%;
+            /* Maximum width for large screens */
             height: 400px;
             /* Fix the height to 400px */
             object-fit: cover;
