@@ -55,11 +55,4 @@
             </div>
         </div>
     </div>
-@section('scripts')
-    <script>
-        $(document).ready(function() {
-            $('#summernote').summernote();
-        });
-    </script>
-@endsection
 @endsection

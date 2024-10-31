@@ -17,10 +17,4 @@
             </div>
         </div>
     </div>
-@section('scripts')
-    <script>
-        const img = document.querySelector('#content img');
-        img.classList.add('img-fluid');
-    </script>
-@endsection
 @endsection
