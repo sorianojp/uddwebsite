@@ -15,7 +15,7 @@
                 <div class="image-container">
                     <img src="/image/{{ $news->image }}" class="img-fluid">
                 </div>
-                <p class="text-justify" id="content">{!! $news->content !!}</p>
+                <p class="text-justify content-container">{!! $news->content !!}</p>
             </div>
         </div>
     </div>

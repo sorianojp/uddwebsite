@@ -30,6 +30,19 @@
             object-fit: cover;
             /* Ensure the image maintains its aspect ratio and crops if needed */
         }
+
+        .content-container img {
+            width: 100%;
+            /* Make the image take the full width of the container */
+            height: 400px;
+            /* Fix the height to 400px */
+            object-fit: cover;
+            /* Ensure the image maintains its aspect ratio and crops if needed */
+            display: block;
+            /* Ensure the image behaves as a block-level element */
+            margin: 0 auto;
+            /* Center the image if it's smaller than the container */
+        }
     </style>
     @yield('styles')
 </head>
@@ -47,10 +60,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    <script>
-        const img = document.querySelector('#content img');
-        img.classList.add('img-fluid');
-    </script>
     <script>
         $(document).ready(function() {
             $('#summernote').summernote();
