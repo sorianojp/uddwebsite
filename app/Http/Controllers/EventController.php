@@ -23,8 +23,8 @@ class EventController extends Controller
 
     public function allevents()
     {
-        $events = Event::all();
         $news = News::inRandomOrder()->get();
+        $events = Event::orderBy('created_at', 'desc')->get();
         return view('allevents',compact('events', 'news'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }

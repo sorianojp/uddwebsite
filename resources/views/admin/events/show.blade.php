@@ -12,7 +12,9 @@
                 @else
                     <span>N/A</span>
                 @endif
-                <img src="/image/{{ $event->image }}" class="img-fluid">
+                <div class="image-container">
+                    <img src="/image/{{ $event->image }}" class="img-fluid">
+                </div>
                 <p class="text-justify" id="content">{!! $event->content !!}</p>
             </div>
         </div>
