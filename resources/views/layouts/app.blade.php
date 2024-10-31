@@ -30,10 +30,6 @@
             object-fit: cover;
             /* Ensure the image maintains its aspect ratio and crops if needed */
         }
-
-        .content-container p img {
-            width: 300px;
-        }
     </style>
     @yield('styles')
 </head>
@@ -55,6 +51,10 @@
         $(document).ready(function() {
             $('#summernote').summernote();
         });
+    </script>
+    <script>
+        const img = document.querySelector('#content-container p img');
+        img.classList.add('img-fluid');
     </script>
     @yield('scripts')
 </body>
