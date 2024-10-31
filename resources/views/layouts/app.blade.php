@@ -14,19 +14,21 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <style>
         .image-container {
-            width: 1000px;
+            width: 100%;
+            /* Let the width auto-fit the container */
             height: 400px;
+            /* Fixed height */
             overflow: hidden;
-            /* Ensures the image stays within the container */
+            /* Hide any overflow */
         }
 
         .image-container img {
             width: 100%;
-            /* Ensure the image fills the width */
+            /* Make the image take up the full width */
             height: 100%;
-            /* Ensure the image fills the height */
+            /* Fill the height (400px) */
             object-fit: cover;
-            /* Maintains aspect ratio and crops the excess parts */
+            /* Ensure the image maintains its aspect ratio and crops if needed */
         }
     </style>
     @yield('styles')
