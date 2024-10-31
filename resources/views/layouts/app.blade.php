@@ -32,7 +32,7 @@
         }
 
         .content-container p img {
-            width: 300px !important;
+            width: 100% !important;
         }
     </style>
     @yield('styles')
