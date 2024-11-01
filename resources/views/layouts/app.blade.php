@@ -32,8 +32,11 @@
         }
 
         .content-container p a {
+            display: block;
+            /* or inline-block */
             width: 100%;
         }
+
 
         .content-container p img {
             width: 100% !important;
