@@ -6,6 +6,7 @@ use App\Event;
 use App\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image; // Add this import
 
 class NewsController extends Controller
 {
@@ -35,6 +36,7 @@ class NewsController extends Controller
         return view('admin.news.create', compact('categories'));
     }
 
+
     public function store(Request $request)
     {
         $request->validate([
@@ -46,18 +48,39 @@ class NewsController extends Controller
 
         $input = $request->all();
 
-
         if ($image = $request->file('image')) {
+            // Specify the destination path
             $destinationPath = 'image/';
             $coverImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $coverImage);
-            $input['image'] = "$coverImage";
+            $filePath = $destinationPath . $coverImage;
+
+            // Resize image if it's too large
+            $maxWidth = 1024; // Define max width
+            $maxHeight = 768; // Define max height
+            $maxFileSize = 5120; // Max file size in kilobytes (5MB)
+
+            // Create an instance of the image
+            $img = Image::make($image);
+
+            // Check the file size
+            if ($image->getSize() > $maxFileSize * 1024) {
+                // Resize the image if it exceeds the max size
+                $img->resize($maxWidth, $maxHeight, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                });
+            }
+
+            // Save the image
+            $img->save($filePath);
+            $input['image'] = $coverImage;
         }
 
         Auth::user()->news()->create($input);
 
-        return redirect()->route('news.index')->with('success', 'Created Succesfully');
+        return redirect()->route('news.index')->with('success', 'Created Successfully');
     }
+
 
     public function show(News $news)
     {
