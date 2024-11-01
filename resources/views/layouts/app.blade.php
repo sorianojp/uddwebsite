@@ -31,11 +31,6 @@
             /* Ensure the image maintains its aspect ratio and crops if needed */
         }
 
-        .content-container p a {
-            text-align: justify !important;
-            text-justify: inter-word !important;
-        }
-
         .content-container p img {
             width: 100% !important;
         }
@@ -64,6 +59,10 @@
     <script>
         const img = document.querySelector('#content-container p img');
         img.classList.add('img-fluid');
+    </script>
+    <script>
+        const a = document.querySelector('#content-container p a');
+        a.classList.add('text-truncate');
     </script>
     @yield('scripts')
 </body>
