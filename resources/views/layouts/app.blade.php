@@ -31,6 +31,24 @@
             /* Ensure the image maintains its aspect ratio and crops if needed */
         }
 
+        .image-container-sm {
+            width: 100%;
+            /* Let the width auto-fit the container */
+            height: 200px;
+            /* Fixed height */
+            overflow: hidden;
+            /* Hide any overflow */
+        }
+
+        .image-container-sm img {
+            width: 100%;
+            /* Make the image take up the full width */
+            height: 100%;
+            /* Fill the height (400px) */
+            object-fit: cover;
+            /* Ensure the image maintains its aspect ratio and crops if needed */
+        }
+
         .content-container p a {
             word-wrap: break-word;
             word-break: break-all;
