@@ -62,7 +62,7 @@
                 <div class="row">
                     @foreach ($news as $n)
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div>
+                            <div class="image-container">
                                 <img src="/image/{{ $n->image }}" class="img-fluid rounded-top">
                             </div>
                             <div class="text-truncate">
