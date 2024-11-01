@@ -32,8 +32,8 @@
         }
 
         .content-container p a {
-            text-align: justify;
-            text-justify: inter-word;
+            text-align: justify !important;
+            text-justify: inter-word !important;
         }
 
         .content-container p img {
