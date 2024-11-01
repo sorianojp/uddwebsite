@@ -26,16 +26,16 @@
             <div class="col-lg-6">
                 <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Featured Events</h5>
                 <div class="row">
-                    @foreach ($fnews as $fn)
+                    @foreach ($fevents as $fe)
                         <div class="col-sm-6 col-md-4 col-lg-3">
                             <div>
-                                <img src="/image/{{ $fn->image }}" class="img-fluid rounded-top">
+                                <img src="/image/{{ $fe->image }}" class="img-fluid rounded-top">
                             </div>
                             <div class="text-truncate">
-                                @if ($fn instanceof App\Event || $fn instanceof App\News)
+                                @if ($fe instanceof App\Event || $fe instanceof App\News)
                                     <a
-                                        href="{{ $fn instanceof App\Event ? route('events.show', $fn->id) : route('news.show', $fn->id) }}">
-                                        {{ $fn->title }}
+                                        href="{{ $fe instanceof App\Event ? route('events.show', $fe->id) : route('news.show', $fe->id) }}">
+                                        {{ $fe->title }}
                                     </a>
                                 @endif
                             </div>
