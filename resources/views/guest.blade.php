@@ -8,7 +8,7 @@
                 <div class="row">
                     @foreach ($fnews as $fn)
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="image-container-sm">
+                            <div class="image-container-xs">
                                 <img src="/image/{{ $fn->image }}" class="img-fluid rounded-top">
                             </div>
                             <div class="text-truncate">
@@ -28,7 +28,7 @@
                 <div class="row">
                     @foreach ($fevents as $fe)
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div>
+                            <div class="image-container-xs">
                                 <img src="/image/{{ $fe->image }}" class="img-fluid rounded-top">
                             </div>
                             <div class="text-truncate">
@@ -76,7 +76,7 @@
                 <div class="row">
                     @foreach ($events as $e)
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div>
+                            <div class="image-container-sm">
                                 <img src="/image/{{ $e->image }}" class="img-fluid rounded-top">
                             </div>
                             <div class="text-truncate">
