@@ -41,31 +41,23 @@ class NewsController extends Controller
             'title' => 'required',
             'content' => 'required',
             'category_id' => 'nullable',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ]);
 
         $input = $request->all();
 
-        try {
-            if ($image = $request->file('image')) {
-                $destinationPath = public_path('image'); // Use public_path to get the full path
-                $coverImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-                $image->move($destinationPath, $coverImage);
-                $input['image'] = $coverImage; // Save only the filename in the database
-            }
 
-            Auth::user()->news()->create($input);
-
-            return redirect()->route('news.index')->with('success', 'Created Successfully');
-        } catch (\Exception $e) {
-            // Log the error for debugging
-            \Log::error('File upload error: ' . $e->getMessage());
-
-            // Redirect back with error message
-            return redirect()->back()->withErrors(['msg' => 'Error uploading the image: ' . $e->getMessage()]);
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $coverImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $coverImage);
+            $input['image'] = "$coverImage";
         }
-    }
 
+        Auth::user()->news()->create($input);
+
+        return redirect()->route('news.index')->with('success', 'Created Succesfully');
+    }
 
     public function show(News $news)
     {
