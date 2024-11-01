@@ -34,7 +34,6 @@ class NewsController extends Controller
         $categories = Category::all();
         return view('admin.news.create', compact('categories'));
     }
-
     public function store(Request $request)
     {
         $request->validate([
@@ -46,18 +45,49 @@ class NewsController extends Controller
 
         $input = $request->all();
 
+        try {
+            if ($image = $request->file('image')) {
+                $destinationPath = 'image/';
+                $coverImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                $image->move($destinationPath, $coverImage);
+                $input['image'] = "$coverImage";
+            }
 
-        if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $coverImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $coverImage);
-            $input['image'] = "$coverImage";
+            Auth::user()->events()->create($input);
+
+            return redirect()->route('events.index')->with('success', 'Created Successfully');
+        } catch (\Exception $e) {
+            // Log the error for debugging
+            \Log::error('File upload error: ' . $e->getMessage());
+
+            // Display a detailed error in the response (optional for dev purposes)
+            return back()->withErrors(['msg' => 'Error uploading the image: ' . $e->getMessage()]);
         }
-
-        Auth::user()->news()->create($input);
-
-        return redirect()->route('news.index')->with('success', 'Created Succesfully');
     }
+
+    // public function store(Request $request)
+    // {
+    //     $request->validate([
+    //         'title' => 'required',
+    //         'content' => 'required',
+    //         'category_id' => 'nullable',
+    //         'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+    //     ]);
+
+    //     $input = $request->all();
+
+
+    //     if ($image = $request->file('image')) {
+    //         $destinationPath = 'image/';
+    //         $coverImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+    //         $image->move($destinationPath, $coverImage);
+    //         $input['image'] = "$coverImage";
+    //     }
+
+    //     Auth::user()->news()->create($input);
+
+    //     return redirect()->route('news.index')->with('success', 'Created Succesfully');
+    // }
 
     public function show(News $news)
     {
