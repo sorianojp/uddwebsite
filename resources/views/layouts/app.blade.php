@@ -32,9 +32,8 @@
         }
 
         .content-container p a {
-            display: block;
-            /* or inline-block */
-            width: 100%;
+            word-wrap: break-word;
+            word-break: break-all;
         }
 
 
