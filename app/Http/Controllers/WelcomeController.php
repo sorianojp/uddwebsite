@@ -14,8 +14,8 @@ class WelcomeController extends Controller
     public function welcome()
     {
 
-        $fnews = News::where('featured', 1)->limit(4)->get();
-        $fevents = Event::where('featured', 1)->limit(4)->get();
+        $fnews = News::where('featured', '1')->limit(4)->get();
+        $fevents = Event::where('featured', '1')->limit(4)->get();
         $news = News::latest()->take(4)->get();
         $events = Event::latest()->take(4)->get();
         $ads = Ad::where('featured', '=', '1')->limit(6)->get();
