@@ -41,7 +41,7 @@ class EventController extends Controller
             'title' => 'required',
             'content' => 'required',
             'category_id' => 'nullable',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
         ]);
 
         $input = $request->all();
