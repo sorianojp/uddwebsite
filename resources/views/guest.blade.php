@@ -8,7 +8,7 @@
                 <div class="row">
                     @foreach ($fnews as $fn)
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div>
+                            <div class="image-container-sm">
                                 <img src="/image/{{ $fn->image }}" class="img-fluid rounded-top">
                             </div>
                             <div class="text-truncate">
