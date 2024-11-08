@@ -1,11 +1,13 @@
 @extends('layouts.app')
 @section('content')
     <section class="p-5">
-        <h5 class="text-uppercase bg-primary p-2 rounded-lg">
-            <a href="{{ route('allads') }}" class="text-white">
-                Sustainable Development Goals
-            </a>
-        </h5>
+        <div class="row">
+            <h5 class="text-uppercase bg-primary p-2 rounded-lg">
+                <a href="{{ route('allads') }}" class="text-white">
+                    Sustainable Development Goals
+                </a>
+            </h5>
+        </div>
         <div class="row">
             @foreach ($categories as $c)
                 <div>
