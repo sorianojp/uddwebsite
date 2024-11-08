@@ -8,8 +8,7 @@
         </h5>
         <div class="row">
             @foreach ($categories as $c)
-                {{-- <div class="card m-2"> --}}
-                <div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <a href="{{ route('sdgs.show', $c) }}">
                         @if ($c->name == 'NO POVERTY')
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/SDG1.gif" width="100" />
@@ -55,7 +54,6 @@
                     {{-- <a href="{{ route('sdgs.show', $c) }}">{{ ++$i }} -
                             {{ $c->name }}</a> --}}
                 </div>
-                {{-- </div> --}}
             @endforeach
         </div>
     </section>
