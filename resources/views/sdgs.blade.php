@@ -53,8 +53,7 @@
                                 width="150" />
                         @endif
                     </a>
-                    <a href="{{ route('sdgs.show', $c) }}">{{ ++$i }} -
-                        {{ $c->name }}</a>
+                    <p>{{ $c->name }}</p>
                 </div>
             @endforeach
         </div>
