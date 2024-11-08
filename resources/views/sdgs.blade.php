@@ -52,8 +52,7 @@
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/4e763a8d-a692-4af3-b8ce-711925233942.gif"
                                 width="150" />
                         @endif
-                    </a><br>
-                    <p>{{ $c->name }}</p>
+                    </a>
                 </div>
             @endforeach
         </div>
