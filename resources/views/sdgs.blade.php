@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             @foreach ($categories as $c)
-                <div class="row">
+                <div>
                     <a href="{{ route('sdgs.show', $c) }}">
                         @if ($c->name == 'NO POVERTY')
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/SDG1.gif" width="150" />
@@ -29,7 +29,7 @@
                         @elseif ($c->name == 'DECENT WORK AND ECONOMIC GROWTH')
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/sdg8.gif" width="150" />
                         @elseif ($c->name == 'INDUSTRY INNOVATION AND INFRASTRUCTURE')
-                            <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/sdg8.gif" width="150" />
+                            <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/sdg9.gif" width="150" />
                         @elseif ($c->name == 'REDUCED INEQUALITIES')
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/sdg10.gif" width="150" />
                         @elseif ($c->name == 'SUSTAINABLE CITIES AND COMMUNITIES')
@@ -52,7 +52,7 @@
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/4e763a8d-a692-4af3-b8ce-711925233942.gif"
                                 width="150" />
                         @endif
-                    </a>
+                    </a><br>
                     <p>{{ $c->name }}</p>
                 </div>
             @endforeach
