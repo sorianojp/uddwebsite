@@ -36,7 +36,7 @@
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/sdg11.gif" width="150" />
                         @elseif ($c->name == 'RESPONSIBLE CONSUMPTION AND PRODUCTION')
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/sdg12.gif" width="150" />
-                        @elseif ($c->name == 'CLIMATE ACTION INFRASTRUCTURE')
+                        @elseif ($c->name == 'CLIMATE ACTION')
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/b7b36a4d-abfe-4489-bcf5-83d14f4188f8.gif"
                                 width="150" />
                         @elseif ($c->name == 'LIFE BELOW WATER')
