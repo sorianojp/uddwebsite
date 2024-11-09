@@ -21,8 +21,8 @@
                     @endif
                 </div>
                 <div class="row">
-                    <span class="font-weight-bold">{{ $event->user->name }}</span><br>
-                    <span class="text-muted">{{ $event->created_at->format('F j, Y') }}</span>
+                    <div class="font-weight-bold">{{ $event->user->name }}</div>
+                    <div class="text-muted">{{ $event->created_at->format('F j, Y') }}</div>
                 </div>
                 <div class="row my-4 d-flex justify-content-end">
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $event->id)) }}"
