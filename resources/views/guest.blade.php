@@ -64,11 +64,17 @@
                 <div class="row">
                     @foreach ($news as $n)
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="image-container-sm">
-                                <img src="/image/{{ $n->image }}" class="img-fluid rounded-top">
-                            </div>
-                            <div class="text-truncate">
-                                <a href="{{ route('news.show', $n->id) }}">{{ $n->title }}</a>
+                            <div class="card">
+                                <div class="image-container-sm">
+                                    <img src="/image/{{ $n->image }}" class="card-img-top" alt="{{ $n->title }}">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-truncate">{{ $n->title }}</h5>
+                                </div>
+                                <div class="card-footer bg-primary text-white d-flex justify-content-between">
+                                    <span>{{ $n->created_at->format('F j, Y') }}</span>
+                                    <a href="{{ route('news.show', $n->id) }}" class="text-white">READ MORE</a>
+                                </div>
                             </div>
                         </div>
                     @endforeach
@@ -78,11 +84,17 @@
                 <div class="row">
                     @foreach ($events as $e)
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="image-container-sm">
-                                <img src="/image/{{ $e->image }}" class="img-fluid rounded-top">
-                            </div>
-                            <div class="text-truncate">
-                                <a href="{{ route('events.show', $e->id) }}">{{ $e->title }}</a>
+                            <div class="card">
+                                <div class="image-container-sm">
+                                    <img src="/image/{{ $e->image }}" class="card-img-top" alt="{{ $e->title }}">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-truncate">{{ $e->title }}</h5>
+                                </div>
+                                <div class="card-footer bg-primary text-white d-flex justify-content-between">
+                                    <span>{{ $e->created_at->format('F j, Y') }}</span>
+                                    <a href="{{ route('news.show', $e->id) }}" class="text-white">READ MORE</a>
+                                </div>
                             </div>
                         </div>
                     @endforeach
