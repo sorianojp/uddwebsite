@@ -1,9 +1,14 @@
 @extends('layouts.app')
-<meta property="og:title" content="{{ $fn->title }}" />
-<meta property="og:description" content="Read the latest news: {{ $fn->title }}" />
-<meta property="og:image" content="{{ asset('image/' . $fn->image) }}" />
-<meta property="og:url" content="{{ route('news.show', $fn->id) }}" />
-<meta property="og:type" content="article" />
+@section('head')
+    <!-- Open Graph meta tags for Facebook sharing -->
+    <meta property="og:title" content="{{ $news->title }}" />
+    <meta property="og:description" content="{{ Str::limit(strip_tags($news->content), 150) }}" />
+    <meta property="og:image" content="{{ asset('image/' . $news->image) }}" />
+    <meta property="og:url" content="{{ route('news.show', $news->id) }}" />
+    <meta property="og:type" content="article" />
+@endsection
+
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center my-5">
