@@ -15,7 +15,7 @@
                 <span>{{ $event->user->name }} | {{ $event->created_at->format('F j, Y') }}</span> |
                 @if ($event->category)
                     <a href="{{ route('sdgs.show', $event->category->id) }}">
-                        <span>{{ $event->category->name }}</span>
+                        <span class="badge badge-secondary">{{ $event->category->name }}</span>
                     </a>
                 @else
                     <span>N/A</span>

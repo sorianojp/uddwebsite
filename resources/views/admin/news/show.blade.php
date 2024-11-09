@@ -15,7 +15,7 @@
                 <span>{{ $news->user->name }} | {{ $news->created_at->format('F j, Y') }}</span> |
                 @if ($news->category)
                     <a href="{{ route('sdgs.show', $news->category->id) }}">
-                        <span>{{ $news->category->name }}</span>
+                        <span class="badge badge-secondary">{{ $news->category->name }}</span>
                     </a>
                 @else
                     <span>N/A</span>
