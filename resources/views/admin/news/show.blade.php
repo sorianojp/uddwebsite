@@ -20,6 +20,7 @@
                             </a>
                         </h4>
                     @else
+                        <div class="row justify-content-center">
                     @endif
                 </div>
                 <div class="row d-flex justify-content-between align-items-center border-bottom my-2">
@@ -37,10 +38,12 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="image-container">
-                <img src="/image/{{ $news->image }}" class="img-fluid">
+            <div class="col-sm-8">
+                <div class="image-container">
+                    <img src="/image/{{ $news->image }}" class="img-fluid">
+                </div>
+                <p class="text-justify content-container">{!! $news->content !!}</p>
             </div>
-            <p class="text-justify content-container">{!! $news->content !!}</p>
         </div>
     </div>
 @endsection
