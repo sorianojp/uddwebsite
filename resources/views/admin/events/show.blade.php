@@ -17,7 +17,7 @@
                 <div class="row">
                     @if ($event->category)
                         <a href="{{ route('sdgs.show', $event->category->id) }}">
-                            <span class="badge badge-secondary h4">{{ $event->category->name }}</span>
+                            <div class="badge badge-secondary h4">{{ $event->category->name }}</div>
                         </a>
                     @else
                     @endif
