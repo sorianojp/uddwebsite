@@ -12,7 +12,6 @@
                                 <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
                                 <div class="card-body text-truncate">
                                     <h5 class="card-title">{{ $fn->title }}</h5>
-                                    <p class="card-text text-truncate">{!! $fn->content !!}</p>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $fn->created_at->format('F j, Y') }}</span>
@@ -33,7 +32,6 @@
                                 <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
                                 <div class="card-body text-truncate">
                                     <h5 class="card-title">{{ $fe->title }}</h5>
-                                    <p class="card-text">{!! $fe->content !!}</p>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $fe->created_at->format('F j, Y') }}</span>
