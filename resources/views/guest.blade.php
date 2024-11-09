@@ -76,11 +76,12 @@
                                     <img src="/image/{{ $n->image }}" class="card-img-top" alt="{{ $n->title }}">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title text-truncate">{{ $n->title }}</h5>
+                                    <a href="{{ route('news.show', $n->id) }}">
+                                        <h5 class="card-title text-truncate">{{ $n->title }}</h5>
+                                    </a>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $n->created_at->format('F j, Y') }}</span>
-                                    <a href="{{ route('news.show', $n->id) }}" class="text-white">READ MORE</a>
                                 </div>
                             </div>
                         </div>
