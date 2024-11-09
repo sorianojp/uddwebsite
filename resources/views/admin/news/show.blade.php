@@ -34,12 +34,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="image-container">
-                        <img src="/image/{{ $news->image }}" class="img-fluid">
-                    </div>
-                    <p class="text-justify content-container">{!! $news->content !!}</p>
+
+                <div class="image-container">
+                    <img src="/image/{{ $news->image }}" class="img-fluid">
                 </div>
+                <p class="text-justify content-container">{!! $news->content !!}</p>
+
             </div>
         </div>
     </div>
