@@ -8,13 +8,16 @@
                 <div class="row">
                     @foreach ($fnews as $fn)
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="image-container-xs">
-                                <img src="/image/{{ $fn->image }}" class="img-fluid rounded-top">
-                            </div>
-                            <div class="text-truncate">
-                                <a href="{{ route('news.show', $fn->id) }}">
-                                    {{ $fn->title }}
-                                </a>
+                            <div class="card">
+                                <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $fn->title }}</h5>
+                                    <p class="card-text text-truncate">{{ $fn->content }}</p>
+                                </div>
+                                <div class="card-footer bg-primary text-white d-flex justify-content-between">
+                                    <span>{{ $fn->created_at->format('F j, Y') }}</span>
+                                    <a href="{{ route('news.show', $fn->id) }}" class="text-white">READ MORE</a>
+                                </div>
                             </div>
                         </div>
                     @endforeach
@@ -25,13 +28,16 @@
                 <div class="row">
                     @foreach ($fevents as $fe)
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="image-container-xs">
-                                <img src="/image/{{ $fe->image }}" class="img-fluid rounded-top">
-                            </div>
-                            <div class="text-truncate">
-                                <a href="{{ route('news.show', $fe->id) }}">
-                                    {{ $fe->title }}
-                                </a>
+                            <div class="card">
+                                <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $fe->title }}</h5>
+                                    <p class="card-text text-truncate">{{ $fe->content }}</p>
+                                </div>
+                                <div class="card-footer bg-primary text-white d-flex justify-content-between">
+                                    <span>{{ $fe->created_at->format('F j, Y') }}</span>
+                                    <a href="{{ route('events.show', $fe->id) }}" class="text-white">READ MORE</a>
+                                </div>
                             </div>
                         </div>
                     @endforeach
