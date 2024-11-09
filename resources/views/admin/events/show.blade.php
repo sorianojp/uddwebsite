@@ -13,11 +13,9 @@
             <div class="col-sm-8">
                 <div class="row">
                     <h2 class="font-weight-bold text-primary">{{ $event->title }}</h2>
-                </div>
-                <div class="row">
                     @if ($event->category)
                         <a href="{{ route('sdgs.show', $event->category->id) }}">
-                            <div class="badge badge-secondary h4">{{ $event->category->name }}</div>
+                            <h4 class="badge badge-secondary">{{ $event->category->name }}</h4>
                         </a>
                     @else
                     @endif
