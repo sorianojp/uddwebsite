@@ -46,6 +46,10 @@
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $fe->created_at->format('F j, Y') }}</span>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $fe->id)) }}"
+                                        target="_blank" class="text-white">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -82,6 +86,10 @@
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $n->created_at->format('F j, Y') }}</span>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $n->id)) }}"
+                                        target="_blank" class="text-white">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -103,6 +111,10 @@
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $e->created_at->format('F j, Y') }}</span>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $e->id)) }}"
+                                        target="_blank" class="text-white">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -20,6 +20,12 @@
                 @else
                     <span>N/A</span>
                 @endif
+                <div class="my-3">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $news->id)) }}"
+                        target="_blank" class="btn btn-primary">
+                        Share on Facebook
+                    </a>
+                </div>
                 <div class="image-container">
                     <img src="/image/{{ $news->image }}" class="img-fluid">
                 </div>
