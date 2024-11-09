@@ -10,7 +10,7 @@
                         <div class="col-sm-12 col-md-8 col-lg-6">
                             <div class="card">
                                 <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
-                                <div class="card-body text-truncate">
+                                <div class="card-body">
                                     <h5 class="card-title">{{ $fn->title }}</h5>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
@@ -30,7 +30,7 @@
                             <div class="card">
                                 {{-- <div class="image-container-xs"> --}}
                                 <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
-                                <div class="card-body text-truncate">
+                                <div class="card-body">
                                     <h5 class="card-title">{{ $fe->title }}</h5>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
