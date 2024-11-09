@@ -112,7 +112,7 @@
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $e->created_at->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $e->id)) }}"
-                                        target="_blank" class="text-white">
+                                        target="_blank">
                                         <i class="bi bi-facebook"></i>
                                     </a>
                                 </div>
