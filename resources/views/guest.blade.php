@@ -34,7 +34,7 @@
                                     <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ $fe->title }}</h5>
+                                    <h5 class="card-title text-truncate">{{ $fe->title }}</h5>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $fe->created_at->format('F j, Y') }}</span>
