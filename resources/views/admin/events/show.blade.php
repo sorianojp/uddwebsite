@@ -11,18 +11,15 @@
     <div class="container">
         <div class="row justify-content-center my-5">
             <div class="col-sm-8">
-                <div class="row">
-                    <h2 class="font-weight-bold">{{ $event->title }}</h2>
-                    @if ($event->category)
-                        <a href="{{ route('sdgs.show', $event->category->id) }}">
-                            <span class="badge badge-secondary">{{ $event->category->name }}</span>
-                        </a>
-                    @else
-                        <span>N/A</span>
-                    @endif
-                </div>
-                <h4 class="font-weight-bold">{{ $event->user->name }}</h4>
-                <h5>{{ $event->created_at->format('F j, Y') }}</h5>
+                <h2 class="font-weight-bold">{{ $event->title }}</h2>
+                <span>{{ $event->user->name }} | {{ $event->created_at->format('F j, Y') }}</span> |
+                @if ($event->category)
+                    <a href="{{ route('sdgs.show', $event->category->id) }}">
+                        <span class="badge badge-secondary">{{ $event->category->name }}</span>
+                    </a>
+                @else
+                    <span>N/A</span>
+                @endif
                 <div class="my-3">
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $event->id)) }}"
                         target="_blank" class="btn btn-primary">
