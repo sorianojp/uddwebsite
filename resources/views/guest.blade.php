@@ -48,7 +48,7 @@
                                     <span>{{ $fe->created_at->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $fe->id)) }}"
                                         target="_blank" class="text-white">
-                                        <i class="bi bi-facebook"></i>
+                                        <i class="bi bi-facebook h3"></i>
                                     </a>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                                     <span>{{ $n->created_at->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $n->id)) }}"
                                         target="_blank" class="text-white">
-                                        <i class="bi bi-facebook"></i>
+                                        <i class="bi bi-facebook h3"></i>
                                     </a>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                                     <span>{{ $e->created_at->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $e->id)) }}"
                                         target="_blank">
-                                        <i class="bi bi-facebook"></i>
+                                        <i class="bi bi-facebook h3"></i>
                                     </a>
                                 </div>
                             </div>

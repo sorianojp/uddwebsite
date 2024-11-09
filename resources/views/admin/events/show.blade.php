@@ -21,13 +21,13 @@
                     @endif
                 </div>
                 <div class="row">
-                    <span class="font-weight-bold">{{ $event->user->name }}</span>
+                    <h4 class="font-weight-bold">{{ $event->user->name }}</h4>
                     <span class="text-muted">{{ $event->created_at->format('F j, Y') }}</span>
                 </div>
                 <div class="row my-4 d-flex justify-content-end">
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $event->id)) }}"
                         target="_blank">
-                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-facebook h3"></i>
                     </a>
                 </div>
                 <div class="row">
