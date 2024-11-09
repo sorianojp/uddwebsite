@@ -11,20 +11,16 @@
     <div class="container">
         <div class="row justify-content-center my-5">
             <div class="col-sm-8">
-                <div class="row">
-                    <h2 class="font-weight-bold text-primary">{{ $event->title }}</h2>
-                    @if ($event->category)
-                        <h4>
-                            <a href="{{ route('sdgs.show', $event->category->id) }}">
-                                <span class="badge badge-secondary h4">{{ $event->category->name }}</span>
-                            </a>
-                        </h4>
-                    @else
-                    @endif
-                </div>
-                <div class="row d-flex justify-content-between align-items-center border-bottom my-2">
+                <h2 class="font-weight-bold">{{ $event->title }}</h2>
+                @if ($event->category)
+                    <a href="{{ route('sdgs.show', $event->category->id) }}">
+                        <span class="badge badge-secondary">{{ $event->category->name }}</span>
+                    </a>
+                @else
+                @endif
+                <div class="d-flex justify-content-between align-items-center my-2 border-bottom">
                     <div>
-                        <span class="font-weight-bold">{{ $event->user->name }}</span><br>
+                        <span class="h5">{{ $event->user->name }}</span><br>
                         <span class="text-muted">{{ $event->created_at->format('F j, Y') }}</span>
                     </div>
                     <div>
@@ -34,12 +30,10 @@
                         </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="image-container">
-                        <img src="/image/{{ $event->image }}" class="img-fluid">
-                    </div>
-                    <p class="text-justify content-container">{!! $event->content !!}</p>
+                <div class="image-container">
+                    <img src="/image/{{ $event->image }}" class="img-fluid">
                 </div>
+                <div class="text-justify content-container">{!! $event->content !!}</div>
             </div>
         </div>
     </div>
