@@ -20,17 +20,17 @@
                     @else
                     @endif
                 </div>
-                <div class="row">
-                    <div class="font-weight-bold">{{ $event->user->name }}</div>
-                </div>
-                <div class="row">
-                    <div class="text-muted">{{ $event->created_at->format('F j, Y') }}</div>
-                </div>
-                <div class="row my-4 d-flex justify-content-end">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $event->id)) }}"
-                        target="_blank">
-                        <i class="bi bi-facebook h2"></i>
-                    </a>
+                <div class="row d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="font-weight-bold">{{ $event->user->name }}</span><br>
+                        <span class="text-muted">{{ $event->created_at->format('F j, Y') }}</span>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $event->id)) }}"
+                            target="_blank">
+                            <i class="bi bi-facebook h2"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="image-container">
