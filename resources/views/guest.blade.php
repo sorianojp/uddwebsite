@@ -15,9 +15,16 @@
                                 <div class="card-body">
                                     <h5 class="card-title text-truncate">{{ $fn->title }}</h5>
                                 </div>
-                                <div class="card-footer bg-primary text-white d-flex justify-content-between">
+                                <div
+                                    class="card-footer bg-primary text-white d-flex justify-content-between align-items-center">
                                     <span>{{ $fn->created_at->format('F j, Y') }}</span>
-                                    <a href="{{ route('news.show', $fn->id) }}" class="text-white">READ MORE</a>
+                                    <div>
+                                        <a href="{{ route('news.show', $fn->id) }}" class="text-white me-3">READ MORE</a>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $fn->id)) }}"
+                                            target="_blank" class="text-white">
+                                            <i class="fab fa-facebook"></i> Share
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +100,7 @@
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $e->created_at->format('F j, Y') }}</span>
-                                    <a href="{{ route('news.show', $e->id) }}" class="text-white">READ MORE</a>
+                                    <a href="{{ route('events.show', $e->id) }}" class="text-white">READ MORE</a>
                                 </div>
                             </div>
                         </div>
