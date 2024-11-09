@@ -12,12 +12,9 @@
                                 <img src="/image/{{ $fn->image }}" class="img-fluid rounded-top">
                             </div>
                             <div class="text-truncate">
-                                @if ($fn instanceof App\Event || $fn instanceof App\News)
-                                    <a
-                                        href="{{ $fn instanceof App\Event ? route('events.show', $fn->id) : route('news.show', $fn->id) }}">
-                                        {{ $fn->title }}
-                                    </a>
-                                @endif
+                                <a href="{{ route('news.show', $fn->id) }}">
+                                    {{ $fn->title }}
+                                </a>
                             </div>
                         </div>
                     @endforeach
@@ -32,12 +29,9 @@
                                 <img src="/image/{{ $fe->image }}" class="img-fluid rounded-top">
                             </div>
                             <div class="text-truncate">
-                                @if ($fe instanceof App\Event || $fe instanceof App\News)
-                                    <a
-                                        href="{{ $fe instanceof App\Event ? route('events.show', $fe->id) : route('news.show', $fe->id) }}">
-                                        {{ $fe->title }}
-                                    </a>
-                                @endif
+                                <a href="{{ route('news.show', $fe->id) }}">
+                                    {{ $fe->title }}
+                                </a>
                             </div>
                         </div>
                     @endforeach
