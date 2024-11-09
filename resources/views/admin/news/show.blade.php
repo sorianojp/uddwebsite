@@ -10,7 +10,7 @@
 @section('content')
     <div class="container">
         <div>
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $event->id)) }}"
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $news->id)) }}"
                 target="_blank">
                 <i class="bi bi-facebook h2"></i>
             </a>
