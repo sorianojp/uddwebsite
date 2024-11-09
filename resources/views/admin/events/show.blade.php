@@ -20,7 +20,7 @@
                     @else
                     @endif
                 </div>
-                <div class="row d-flex justify-content-between align-items-center border-b my-2">
+                <div class="row d-flex justify-content-between align-items-center border-bottom my-2">
                     <div>
                         <span class="font-weight-bold">{{ $event->user->name }}</span><br>
                         <span class="text-muted">{{ $event->created_at->format('F j, Y') }}</span>
