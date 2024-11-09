@@ -13,7 +13,7 @@
                                     <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ $fn->title }}</h5>
+                                    <h5 class="card-title text-truncate">{{ $fn->title }}</h5>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $fn->created_at->format('F j, Y') }}</span>
