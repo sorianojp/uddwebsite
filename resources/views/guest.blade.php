@@ -7,7 +7,7 @@
                 <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Featured News</h5>
                 <div class="row">
                     @foreach ($fnews as $fn)
-                        <div class="col-sm-12 col-md-8 col-lg-6">
+                        <div class="col-sm-12 col-md-8 col-lg-6 my-2">
                             <div class="card">
                                 <div class="image-container-xs">
                                     <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
@@ -28,7 +28,7 @@
                 <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Featured Events</h5>
                 <div class="row">
                     @foreach ($fevents as $fe)
-                        <div class="col-sm-12 col-md-8 col-lg-6">
+                        <div class="col-sm-12 col-md-8 col-lg-6 my-2">
                             <div class="card">
                                 <div class="image-container-xs">
                                     <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">

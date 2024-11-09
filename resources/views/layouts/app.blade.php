@@ -52,7 +52,7 @@
         .image-container-xs {
             width: 100%;
             /* Let the width auto-fit the container */
-            height: 100px;
+            height: 150px;
             /* Fixed height */
             overflow: hidden;
             /* Hide any overflow */
