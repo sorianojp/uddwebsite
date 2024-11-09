@@ -16,16 +16,14 @@
 </style>
 @section('content')
     <section class="p-5">
-        <div class="row w-full">
-            <h5 class="text-uppercase bg-primary p-2 rounded-lg">
-                <a href="{{ route('allads') }}" class="text-white">
-                    Sustainable Development Goals
-                </a>
-            </h5>
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-8 col-md-6 col-lg-4">
+                <img src="{{ asset('images/sdg.png') }}" class="img-fluid" />
+            </div>
         </div>
         <div class="row">
             @foreach ($categories as $c)
-                <div class="col-sm-4 col-md-3 col-lg-2 col-lg-1 p-0">
+                <div class="col-sm-4 col-md-3 col-lg-2 col-xl-1 p-0">
                     <a href="{{ route('sdgs.show', $c) }}">
                         @if ($c->name == 'NO POVERTY')
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/SDG1.gif"
