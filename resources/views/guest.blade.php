@@ -22,7 +22,7 @@
                                         <a href="{{ route('news.show', $fn->id) }}" class="text-white me-3">READ MORE</a>
                                         <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $fn->id)) }}"
                                             target="_blank" class="text-white">
-                                            <i class="fab fa-facebook"></i> Share
+                                            <i class="bi bi-share-fill"></i>
                                         </a>
                                     </div>
                                 </div>
