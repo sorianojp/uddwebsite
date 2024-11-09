@@ -4,7 +4,7 @@
     <section class="p-5">
         <div class="row">
             <div class="col-lg-6">
-                <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Featured News</h5>
+                <h5 class="text-uppercase bg-secondary p-2 text-white rounded-lg">Featured News</h5>
                 <div class="row">
                     @foreach ($fnews as $fn)
                         <div class="col-sm-12 col-md-8 col-lg-6 my-2">
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Featured Events</h5>
+                <h5 class="text-uppercase bg-secondary p-2 text-white rounded-lg">Featured Events</h5>
                 <div class="row">
                     @foreach ($fevents as $fe)
                         <div class="col-sm-12 col-md-8 col-lg-6 my-2">
@@ -91,7 +91,7 @@
         </div>
     </section>
     <section class="p-5">
-        <h5 class="text-uppercase bg-primary p-2 rounded-lg"><a href="{{ route('allads') }}"
+        <h5 class="text-uppercase bg-secondary p-2 rounded-lg"><a href="{{ route('allads') }}"
                 class="text-white">Advertisement</a></h5>
         <div class="row">
             @foreach ($ads as $a)
