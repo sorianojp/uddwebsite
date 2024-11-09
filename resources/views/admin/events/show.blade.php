@@ -27,7 +27,7 @@
                 <div class="row my-4 d-flex justify-content-end">
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $event->id)) }}"
                         target="_blank" class="btn btn-primary">
-                        Share on Facebook
+                        <i class="bi bi-facebook"></i>
                     </a>
                 </div>
                 <div class="row">
