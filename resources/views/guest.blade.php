@@ -10,7 +10,7 @@
                         <div class="col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
-                                <div class="card-body">
+                                <div class="card-body text-truncate">
                                     <h5 class="card-title">{{ $fn->title }}</h5>
                                     <p class="card-text text-truncate">{!! $fn->content !!}</p>
                                 </div>
@@ -31,9 +31,9 @@
                             <div class="card">
                                 {{-- <div class="image-container-xs"> --}}
                                 <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
-                                <div class="card-body">
+                                <div class="card-body text-truncate">
                                     <h5 class="card-title">{{ $fe->title }}</h5>
-                                    <p class="card-text text-truncate">{!! $fe->content !!}</p>
+                                    <p class="card-text">{!! $fe->content !!}</p>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $fe->created_at->format('F j, Y') }}</span>
