@@ -9,7 +9,7 @@
 @endsection
 @section('content')
     <div class="container">
-        <div class="row justify-content-center my-5">
+        <div class="row justify-content-center">
             <div class="col-sm-8">
                 <div class="row">
                     <h2 class="font-weight-bold text-primary">{{ $event->title }}</h2>
@@ -34,13 +34,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="image-container">
-                        <img src="/image/{{ $event->image }}" class="img-fluid">
-                    </div>
-                    <p class="text-justify content-container">{!! $event->content !!}</p>
-                </div>
             </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="image-container">
+                <img src="/image/{{ $event->image }}" class="img-fluid">
+            </div>
+            <p class="text-justify content-container">{!! $event->content !!}</p>
         </div>
     </div>
 @endsection
