@@ -1,4 +1,9 @@
 @extends('layouts.app')
+<meta property="og:title" content="{{ $fn->title }}" />
+<meta property="og:description" content="Read the latest news: {{ $fn->title }}" />
+<meta property="og:image" content="{{ asset('image/' . $fn->image) }}" />
+<meta property="og:url" content="{{ route('news.show', $fn->id) }}" />
+<meta property="og:type" content="article" />
 @section('content')
     <div class="container">
         <div class="row justify-content-center my-5">
