@@ -21,18 +21,22 @@
                         <span>N/A</span>
                     @endif
                 </div>
-                <h4 class="font-weight-bold">{{ $event->user->name }}</h4>
-                <h5>{{ $event->created_at->format('F j, Y') }}</h5>
-                <div class="my-3">
+                <div class="row">
+                    <span class="font-weight-bold">{{ $event->user->name }}</span>
+                    <span class="text-muted">{{ $event->created_at->format('F j, Y') }}</span>
+                </div>
+                <div>
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $event->id)) }}"
                         target="_blank" class="btn btn-primary">
                         Share on Facebook
                     </a>
                 </div>
-                <div class="image-container">
-                    <img src="/image/{{ $event->image }}" class="img-fluid">
+                <div class="row">
+                    <div class="image-container">
+                        <img src="/image/{{ $event->image }}" class="img-fluid">
+                    </div>
+                    <p class="text-justify content-container">{!! $event->content !!}</p>
                 </div>
-                <p class="text-justify content-container">{!! $event->content !!}</p>
             </div>
         </div>
     </div>
