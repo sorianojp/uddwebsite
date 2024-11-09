@@ -25,7 +25,7 @@
         </div>
         <div class="row">
             @foreach ($categories as $c)
-                <div class="col-sm-4 col-md-3 col-lg-2 p-0">
+                <div class="col-sm-4 col-md-3 col-lg-2 col-lg-1 p-0">
                     <a href="{{ route('sdgs.show', $c) }}">
                         @if ($c->name == 'NO POVERTY')
                             <img src="https://sdg.neda.gov.ph/wp-content/uploads/2022/09/SDG1.gif"
