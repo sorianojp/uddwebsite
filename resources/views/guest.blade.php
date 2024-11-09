@@ -22,7 +22,7 @@
                                     <span>{{ $fn->created_at->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $fn->id)) }}"
                                         target="_blank" class="text-white">
-                                        <i class="bi bi-facebook bi-lg"></i>
+                                        <i class="bi bi-facebook h3"></i>
                                     </a>
                                 </div>
                             </div>
