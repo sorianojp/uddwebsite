@@ -22,7 +22,7 @@
                                     <span>{{ $fn->created_at->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $fn->id)) }}"
                                         target="_blank" class="text-white">
-                                        <i class="bi bi-share-fill"></i>
+                                        <i class="bi bi-facebook"></i>
                                     </a>
                                 </div>
                             </div>
@@ -40,11 +40,12 @@
                                     <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title text-truncate">{{ $fe->title }}</h5>
+                                    <a href="{{ route('events.show', $fe->id) }}">
+                                        <h5 class="card-title text-truncate">{{ $fe->title }}</h5>
+                                    </a>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $fe->created_at->format('F j, Y') }}</span>
-                                    <a href="{{ route('events.show', $fe->id) }}" class="text-white">READ MORE</a>
                                 </div>
                             </div>
                         </div>
@@ -95,11 +96,12 @@
                                     <img src="/image/{{ $e->image }}" class="card-img-top" alt="{{ $e->title }}">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title text-truncate">{{ $e->title }}</h5>
+                                    <a href="{{ route('events.show', $e->id) }}">
+                                        <h5 class="card-title text-truncate">{{ $e->title }}</h5>
+                                    </a>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $e->created_at->format('F j, Y') }}</span>
-                                    <a href="{{ route('events.show', $e->id) }}" class="text-white">READ MORE</a>
                                 </div>
                             </div>
                         </div>
