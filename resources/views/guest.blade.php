@@ -9,7 +9,9 @@
                     @foreach ($fnews as $fn)
                         <div class="col-sm-12 col-md-8 col-lg-6">
                             <div class="card">
-                                <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
+                                <div class="image-container-xs">
+                                    <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
+                                </div>
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $fn->title }}</h5>
                                 </div>
@@ -28,8 +30,9 @@
                     @foreach ($fevents as $fe)
                         <div class="col-sm-12 col-md-8 col-lg-6">
                             <div class="card">
-                                {{-- <div class="image-container-xs"> --}}
-                                <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
+                                <div class="image-container-xs">
+                                    <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
+                                </div>
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $fe->title }}</h5>
                                 </div>
