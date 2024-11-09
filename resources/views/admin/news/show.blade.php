@@ -20,8 +20,8 @@
                 @endif
                 <div class="d-flex justify-content-between align-items-center my-2">
                     <div>
-                        <span>{{ $news->user->name }}</span><br>
-                        <span>{{ $news->created_at->format('F j, Y') }}</span>
+                        <span class="h4">{{ $news->user->name }}</span><br>
+                        <span class="text-muted">{{ $news->created_at->format('F j, Y') }}</span>
                     </div>
                     <div>
                         <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $news->id)) }}"
