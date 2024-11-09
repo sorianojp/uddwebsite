@@ -12,7 +12,9 @@
         <div class="row justify-content-center my-5">
             <div class="col-sm-8">
                 <div class="row">
-                    <h2 class="font-weight-bold text-primary">{{ $news->title }}</h2><br>
+                    <h2 class="font-weight-bold text-primary">{{ $news->title }}</h2>
+                </div>
+                <div class="row">
                     @if ($news->category)
                         <a href="{{ route('sdgs.show', $news->category->id) }}">
                             <span class="badge badge-secondary">{{ $news->category->name }}</span>
