@@ -18,14 +18,13 @@
                             <span class="badge badge-secondary">{{ $event->category->name }}</span>
                         </a>
                     @else
-                        <span>N/A</span>
                     @endif
                 </div>
                 <div class="row">
                     <span class="font-weight-bold">{{ $event->user->name }}</span>
                     <span class="text-muted">{{ $event->created_at->format('F j, Y') }}</span>
                 </div>
-                <div>
+                <div class="row my-4 d-flex justify-content-end">
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $event->id)) }}"
                         target="_blank" class="btn btn-primary">
                         Share on Facebook
