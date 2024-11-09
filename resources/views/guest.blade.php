@@ -13,18 +13,17 @@
                                     <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title text-truncate">{{ $fn->title }}</h5>
+                                    <a href="{{ route('news.show', $fn->id) }}">
+                                        <h5 class="card-title text-truncate">{{ $fn->title }}</h5>
+                                    </a>
                                 </div>
                                 <div
                                     class="card-footer bg-primary text-white d-flex justify-content-between align-items-center">
                                     <span>{{ $fn->created_at->format('F j, Y') }}</span>
-                                    <div>
-                                        <a href="{{ route('news.show', $fn->id) }}" class="text-white me-3">READ MORE</a>
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $fn->id)) }}"
-                                            target="_blank" class="text-white">
-                                            <i class="bi bi-share-fill"></i>
-                                        </a>
-                                    </div>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $fn->id)) }}"
+                                        target="_blank" class="text-white">
+                                        <i class="bi bi-share-fill"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
