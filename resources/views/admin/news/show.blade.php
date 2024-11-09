@@ -13,14 +13,12 @@
             <div class="col-sm-8">
                 <h2 class="font-weight-bold">{{ $news->title }}</h2>
                 @if ($news->category)
-                    <h5>
-                        <a href="{{ route('sdgs.show', $news->category->id) }}">
-                            <span class="badge badge-secondary">{{ $news->category->name }}</span>
-                        </a>
-                    </h5>
+                    <a href="{{ route('sdgs.show', $news->category->id) }}">
+                        <span class="badge badge-secondary">{{ $news->category->name }}</span>
+                    </a>
                 @else
                 @endif
-                <div class="d-flex justify-content-between align-items-center my-2">
+                <div class="d-flex justify-content-between align-items-center border-bottom my-2">
                     <div>
                         <span class="h5">{{ $news->user->name }}</span><br>
                         <span class="text-muted">{{ $news->created_at->format('F j, Y') }}</span>
