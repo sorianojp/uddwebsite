@@ -11,15 +11,14 @@
     <div class="container">
         <div class="row justify-content-center my-5">
             <div class="col-sm-8">
-                <h2 class="font-weight-bold">{{ $news->title }}</h2><br>
+                <h2 class="font-weight-bold">{{ $news->title }}</h2>
                 @if ($news->category)
                     <a href="{{ route('sdgs.show', $news->category->id) }}">
                         <span>{{ $news->category->name }}</span>
                     </a>
                 @else
-                    <span>N/A</span>
                 @endif
-                <div class="d-flex justify-content-between align-items-center my-4">
+                <div class="d-flex justify-content-between align-items-center my-2">
                     <div>
                         <span>{{ $news->user->name }} | {{ $news->created_at->format('F j, Y') }}</span> |
                     </div>
