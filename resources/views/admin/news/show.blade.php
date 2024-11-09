@@ -11,25 +11,33 @@
     <div class="container">
         <div class="row justify-content-center my-5">
             <div class="col-sm-8">
-                <h2 class="font-weight-bold">{{ $news->title }}</h2>
-                <span>{{ $news->user->name }} | {{ $news->created_at->format('F j, Y') }}</span> |
-                @if ($news->category)
-                    <a href="{{ route('sdgs.show', $news->category->id) }}">
-                        <span class="badge badge-secondary">{{ $news->category->name }}</span>
-                    </a>
-                @else
-                    <span>N/A</span>
-                @endif
-                <div class="my-3">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $news->id)) }}"
-                        target="_blank" class="btn btn-primary">
-                        Share on Facebook
-                    </a>
+                <div class="row">
+                    <h2 class="font-weight-bold text-primary">{{ $news->title }}</h2>
+                    @if ($news->category)
+                        <a href="{{ route('sdgs.show', $news->category->id) }}">
+                            <span class="badge badge-secondary">{{ $news->category->name }}</span>
+                        </a>
+                    @else
+                    @endif
                 </div>
-                <div class="image-container">
-                    <img src="/image/{{ $news->image }}" class="img-fluid">
+                <div class="row d-flex justify-content-between align-items-center border-bottom my-2">
+                    <div>
+                        <span class="font-weight-bold">{{ $news->user->name }}</span><br>
+                        <span class="text-muted">{{ $news->created_at->format('F j, Y') }}</span>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $news->id)) }}"
+                            target="_blank">
+                            <i class="bi bi-facebook h2"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="text-justify content-container">{!! $news->content !!}</div>
+                <div class="row">
+                    <div class="image-container">
+                        <img src="/image/{{ $news->image }}" class="img-fluid">
+                    </div>
+                    <p class="text-justify content-container">{!! $news->content !!}</p>
+                </div>
             </div>
         </div>
     </div>
