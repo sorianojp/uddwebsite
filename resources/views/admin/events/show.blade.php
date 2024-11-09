@@ -22,6 +22,8 @@
                 </div>
                 <div class="row">
                     <div class="font-weight-bold">{{ $event->user->name }}</div>
+                </div>
+                <div class="row">
                     <div class="text-muted">{{ $event->created_at->format('F j, Y') }}</div>
                 </div>
                 <div class="row my-4 d-flex justify-content-end">
