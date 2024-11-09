@@ -12,7 +12,7 @@
         <div class="row justify-content-center my-5">
             <div class="col-sm-8">
                 <div class="row">
-                    <h2 class="font-weight-bold text-primary">{{ $event->title }}</h2>
+                    <h2 class="font-weight-bold text-primary">{{ $event->title }}</h2><br>
                     @if ($event->category)
                         <a href="{{ route('sdgs.show', $event->category->id) }}">
                             <span class="badge badge-secondary">{{ $event->category->name }}</span>
