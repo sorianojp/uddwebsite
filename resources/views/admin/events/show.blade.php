@@ -21,7 +21,7 @@
                     @endif
                 </div>
                 <div class="row">
-                    <h4 class="font-weight-bold">{{ $event->user->name }}</h4>
+                    <span class="font-weight-bold">{{ $event->user->name }}</span><br>
                     <span class="text-muted">{{ $event->created_at->format('F j, Y') }}</span>
                 </div>
                 <div class="row my-4 d-flex justify-content-end">
