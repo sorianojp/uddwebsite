@@ -3,11 +3,15 @@
     .img-hover {
         transition: transform 0.3s ease;
         /* Smooth transition effect */
+        position: relative;
+        /* Ensure it can have a z-index */
     }
 
     .img-hover:hover {
         transform: scale(1.2);
         /* Enlarge the image to 120% on hover */
+        z-index: 10;
+        /* Bring the image to the front */
     }
 </style>
 @section('content')
