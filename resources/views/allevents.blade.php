@@ -9,6 +9,9 @@
                         <img src="/image/{{ $e->image }}" class="img-fluid w-100">
                         <div class="p-3">
                             <h2>{{ $e->title }}</h2>
+                            <a href="{{ $e->category ? route('sdgs.show', $e->category->id) : '#' }}">
+                                <span class="badge badge-secondary">{{ $e->category->name ?? 'N/A' }}</span>
+                            </a>
                             <span>{{ $e->user->name }} |
                                 {{ $e->date ? \Carbon\Carbon::parse($e->date)->format('F j, Y') : \Carbon\Carbon::parse($e->created_at)->format('F j, Y') }}
                             </span>

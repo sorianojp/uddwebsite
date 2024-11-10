@@ -46,10 +46,10 @@
                                     <a href="{{ route('events.show', $fe->id) }}">
                                         <h5 class="card-title text-truncate">{{ $fe->title }}</h5>
                                     </a>
+                                    <a href="{{ $fe->category ? route('sdgs.show', $fe->category->id) : '#' }}">
+                                        <span class="badge badge-secondary">{{ $fe->category->name ?? 'N/A' }}</span>
+                                    </a>
                                 </div>
-                                <a href="{{ $fe->category ? route('sdgs.show', $fe->category->id) : '#' }}">
-                                    <span class="badge badge-secondary">{{ $fe->category->name ?? 'N/A' }}</span>
-                                </a>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $fe->date ? \Carbon\Carbon::parse($fe->date)->format('F j, Y') : \Carbon\Carbon::parse($fe->created_at)->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $fe->id)) }}"
