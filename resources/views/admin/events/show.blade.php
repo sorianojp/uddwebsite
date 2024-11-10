@@ -12,12 +12,9 @@
         <div class="row justify-content-center my-5">
             <div class="col-sm-8">
                 <h2 class="font-weight-bold">{{ $event->title }}</h2>
-                @if ($event->category)
-                    <a href="{{ route('sdgs.show', $event->category->id) }}">
-                        <span class="badge badge-secondary">{{ $event->category->name }}</span>
-                    </a>
-                @else
-                @endif
+                <a href="{{ $event->category ? route('sdgs.show', $event->category->id) : '#' }}">
+                    <span class="badge badge-secondary">{{ $event->category->name ?? 'N/A' }}</span>
+                </a>
                 <div class="d-flex justify-content-between align-items-center my-2 border-bottom">
                     <div>
                         <span class="h5">{{ $event->user->name }}</span><br>
