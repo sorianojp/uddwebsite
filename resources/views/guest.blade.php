@@ -16,6 +16,12 @@
                                     <a href="{{ route('news.show', $fn->id) }}">
                                         <h5 class="card-title text-truncate">{{ $fn->title }}</h5>
                                     </a>
+                                    @if ($fn->category)
+                                        <a href="{{ route('sdgs.show', $fn->category->id) }}">
+                                            <span class="badge badge-secondary">{{ $fn->category->name }}</span>
+                                        </a>
+                                    @else
+                                    @endif
                                 </div>
                                 <div
                                     class="card-footer bg-primary text-white d-flex justify-content-between align-items-center">
