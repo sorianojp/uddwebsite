@@ -19,8 +19,7 @@
                                 </div>
                                 <div
                                     class="card-footer bg-primary text-white d-flex justify-content-between align-items-center">
-                                    <span>{{ $fn->date ? \Carbon\Carbon::parse($fn->date)->format('F j, Y') : \Carbon\Carbon::parse($fn->created_at)->format('F j, Y') }}
-                                    </span>
+                                    <span>{{ $fn->date ? \Carbon\Carbon::parse($fn->date)->format('F j, Y') : \Carbon\Carbon::parse($fn->created_at)->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $fn->id)) }}"
                                         target="_blank" class="text-white">
                                         <i class="bi bi-facebook h3"></i>
@@ -46,7 +45,7 @@
                                     </a>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
-                                    <span>{{ $fe->date }}</span>
+                                    <span>{{ $fe->date ? \Carbon\Carbon::parse($fe->date)->format('F j, Y') : \Carbon\Carbon::parse($fe->created_at)->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $fe->id)) }}"
                                         target="_blank" class="text-white">
                                         <i class="bi bi-facebook h3"></i>
@@ -86,7 +85,7 @@
                                     </a>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
-                                    <span>{{ $n->date }}</span>
+                                    <span>{{ $n->date ? \Carbon\Carbon::parse($n->date)->format('F j, Y') : \Carbon\Carbon::parse($n->created_at)->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $n->id)) }}"
                                         target="_blank" class="text-white">
                                         <i class="bi bi-facebook h3"></i>
