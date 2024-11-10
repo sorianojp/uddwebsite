@@ -19,7 +19,7 @@
                                 </div>
                                 <div
                                     class="card-footer bg-primary text-white d-flex justify-content-between align-items-center">
-                                    <span>{{ $fn->date->format('F j, Y') }}</span>
+                                    <span>{{ $fn->date }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $fn->id)) }}"
                                         target="_blank" class="text-white">
                                         <i class="bi bi-facebook h3"></i>
@@ -45,7 +45,7 @@
                                     </a>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
-                                    <span>{{ $fe->date->format('F j, Y') }}</span>
+                                    <span>{{ $fe->date }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $fe->id)) }}"
                                         target="_blank" class="text-white">
                                         <i class="bi bi-facebook h3"></i>
@@ -85,7 +85,7 @@
                                     </a>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
-                                    <span>{{ $n->date->format('F j, Y') }}</span>
+                                    <span>{{ $n->date }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $n->id)) }}"
                                         target="_blank" class="text-white">
                                         <i class="bi bi-facebook h3"></i>
@@ -110,7 +110,7 @@
                                     </a>
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
-                                    <span>{{ $e->date->format('F j, Y') }}</span>
+                                    <span>{{ $e->date }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $e->id)) }}"
                                         target="_blank">
                                         <i class="bi bi-facebook h3"></i>

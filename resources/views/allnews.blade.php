@@ -9,7 +9,7 @@
                         <img src="/image/{{ $n->image }}" class="img-fluid w-100">
                         <div class="p-3">
                             <h2>{{ $n->title }}</h2>
-                            <span>{{ $n->user->name }} | {{ $n->date->format('F j, Y') }}</span>
+                            <span>{{ $n->user->name }} | {{ $n->date }}</span>
                             <div class="text-right">
                                 <a href="{{ route('news.show', $n->id) }}">Read More</a>
                             </div>
