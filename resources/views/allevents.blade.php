@@ -9,7 +9,8 @@
                         <img src="/image/{{ $e->image }}" class="img-fluid w-100">
                         <div class="p-3">
                             <h2>{{ $e->title }}</h2>
-                            <span>{{ $e->user->name }} | {{ $e->date }}</span>
+                            <span>{{ $e->user->name }} | {{ \Carbon\Carbon::parse($e->date)->format('F j, Y') }}
+                            </span>
                             <div class="text-right">
                                 <a href="{{ route('events.show', $e->id) }}">Read More</a>
                             </div>
