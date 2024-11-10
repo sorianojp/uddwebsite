@@ -50,6 +50,12 @@
                                         <h5 class="card-title text-truncate">{{ $fe->title }}</h5>
                                     </a>
                                 </div>
+                                @if ($fe->category)
+                                    <a href="{{ route('sdgs.show', $fe->category->id) }}">
+                                        <span class="badge badge-secondary">{{ $fe->category->name }}</span>
+                                    </a>
+                                @else
+                                @endif
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $fe->date ? \Carbon\Carbon::parse($fe->date)->format('F j, Y') : \Carbon\Carbon::parse($fe->created_at)->format('F j, Y') }}</span>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $fe->id)) }}"
@@ -89,6 +95,12 @@
                                     <a href="{{ route('news.show', $n->id) }}">
                                         <h5 class="card-title text-truncate">{{ $n->title }}</h5>
                                     </a>
+                                    @if ($n->category)
+                                        <a href="{{ route('sdgs.show', $n->category->id) }}">
+                                            <span class="badge badge-secondary">{{ $n->category->name }}</span>
+                                        </a>
+                                    @else
+                                    @endif
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $n->date ? \Carbon\Carbon::parse($n->date)->format('F j, Y') : \Carbon\Carbon::parse($n->created_at)->format('F j, Y') }}</span>
@@ -114,6 +126,12 @@
                                     <a href="{{ route('events.show', $e->id) }}">
                                         <h5 class="card-title text-truncate">{{ $e->title }}</h5>
                                     </a>
+                                    @if ($e->category)
+                                        <a href="{{ route('sdgs.show', $e->category->id) }}">
+                                            <span class="badge badge-secondary">{{ $e->category->name }}</span>
+                                        </a>
+                                    @else
+                                    @endif
                                 </div>
                                 <div class="card-footer bg-primary text-white d-flex justify-content-between">
                                     <span>{{ $e->date }}</span>
