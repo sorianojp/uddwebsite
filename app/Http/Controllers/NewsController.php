@@ -80,4 +80,31 @@ class NewsController extends Controller
         return redirect()->route('news.index');
     }
 
+    public function edit(News $news)
+    {
+        $categories = Category::all();
+        return view('admin.news.edit', compact('news', 'categories'));
+    }
+
+    public function update(Request $request, News $news)
+    {
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'category_id' => 'nullable',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+        ]);
+        $input = $request->all();
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $coverImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $coverImage);
+            $input['image'] = "$coverImage";
+        } else {
+            unset($input['image']);
+        }
+        $news->update($input);
+        return redirect()->route('news.index')->with('success', 'Updated Successfully');
+    }
+
 }
