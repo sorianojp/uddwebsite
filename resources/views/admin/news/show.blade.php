@@ -21,7 +21,9 @@
                 <div class="d-flex justify-content-between align-items-center my-2 border-bottom">
                     <div>
                         <span class="h5">{{ $news->user->name }}</span><br>
-                        <span class="text-muted">{{ $news->date }}</span>
+                        <span
+                            class="text-muted">{{ $news->date ? \Carbon\Carbon::parse($news->date)->format('F j, Y') : \Carbon\Carbon::parse($news->created_at)->format('F j, Y') }}
+                        </span>
                     </div>
                     <div>
                         <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $news->id)) }}"

@@ -24,7 +24,7 @@ class NewsController extends Controller
     public function allnews()
     {
         $events = Event::inRandomOrder()->get();
-        $news = News::orderBy('created_at', 'desc')->get();
+        $news = News::orderBy('date', 'desc')->get();
         return view('allnews',compact('news', 'events'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }

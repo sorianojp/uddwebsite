@@ -21,7 +21,9 @@
                 <div class="d-flex justify-content-between align-items-center my-2 border-bottom">
                     <div>
                         <span class="h5">{{ $event->user->name }}</span><br>
-                        <span class="text-muted">{{ $event->date }}</span>
+                        <span
+                            class="text-muted">{{ $event->date ? \Carbon\Carbon::parse($event->date)->format('F j, Y') : \Carbon\Carbon::parse($event->created_at)->format('F j, Y') }}
+                        </span>
                     </div>
                     <div>
                         <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $event->id)) }}"

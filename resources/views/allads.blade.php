@@ -8,7 +8,9 @@
                         <img src="/image/{{ $a->image }}" class="img-fluid w-100">
                         <div class="p-3">
                             <h2>{{ $a->title }}</h2>
-                            <span>{{ $a->user->name }} | {{ $a->date }}</span>
+                            <span>{{ $a->user->name }} |
+                                {{ $a->date ? \Carbon\Carbon::parse($a->date)->format('F j, Y') : \Carbon\Carbon::parse($a->created_at)->format('F j, Y') }}
+                            </span>
                             <div class="text-right">
                                 <a href="{{ route('ads.show', $a->id) }}">Read More</a>
                             </div>
