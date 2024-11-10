@@ -13,22 +13,27 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{ route('events.store') }}" method="POST" enctype='multipart/form-data'>
+                <form action="{{ route('events.update', $event->id) }}" method="POST" enctype='multipart/form-data'>
                     @csrf
+                    @method('PUT') <!-- Use PUT for updating the event -->
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label>Title:</label>
-                                <input type="text" name="title" class="form-control" placeholder="Enter Title">
+                                <input type="text" name="title" class="form-control" value="{{ $event->title }}"
+                                    placeholder="Enter Title">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Category</label>
                                 <select name="category_id" class="form-control">
-                                    <option value="" disabled selected>Select Category</option>
+                                    <option value="" disabled>Select Category</option>
                                     @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        <option value="{{ $category->id }}"
+                                            {{ $event->category_id == $category->id ? 'selected' : '' }}>
+                                            {{ $category->name }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
@@ -36,23 +41,25 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label>Content:</label>
-                                <textarea id="summernote" class="form-control" name="content" placeholder="Enter Description"></textarea>
+                                <textarea id="summernote" class="form-control" name="content">{{ $event->content }}</textarea>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label>Header Image: <span class="font-italic">1000x600 Pixel Only<span></label>
-                                <input type="file" name="image" class="form-control" placeholder="image">
+                                <label>Header Image: <span class="font-italic">1000x600 Pixel Only</span></label>
+                                <input type="file" name="image" class="form-control">
+                                <img src="/image/{{ $event->image }}" alt="Event Image" class="mt-2" width="100">
+                                <!-- Show current image -->
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label>Date:</label>
-                                <input type="date" name="date" class="form-control" placeholder="Select Date">
+                                <input type="date" name="date" class="form-control" value="{{ $event->date }}">
                             </div>
                         </div>
                         <div class="col-sm-12 text-center my-3">
-                            <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-sm btn-primary">Update</button>
                         </div>
                     </div>
                 </form>

@@ -45,8 +45,12 @@
                                 <input type="file" name="image" class="form-control" placeholder="image">
                             </div>
                         </div>
-
-
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Date:</label>
+                                <input type="date" name="date" class="form-control" placeholder="Select Date">
+                            </div>
+                        </div>
                         <div class="col-sm-12 text-center my-3">
                             <button type="submit" class="btn btn-sm btn-primary">Submit</button>
                         </div>

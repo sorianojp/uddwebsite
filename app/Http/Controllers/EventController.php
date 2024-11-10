@@ -42,6 +42,7 @@ class EventController extends Controller
             'content' => 'required',
             'category_id' => 'nullable',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+            'date' => 'nullable|date',
         ]);
 
         $input = $request->all();
@@ -78,5 +79,33 @@ class EventController extends Controller
         $event->save();
 
         return redirect()->route('events.index');
+    }
+
+    public function edit(Event $event)
+    {
+        $categories = Category::all();
+        return view('admin.events.edit', compact('event', 'categories'));
+    }
+
+    public function update(Request $request, Event $event)
+    {
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'category_id' => 'nullable',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+            'date' => 'nullable|date',
+        ]);
+        $input = $request->all();
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $coverImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $coverImage);
+            $input['image'] = "$coverImage";
+        } else {
+            $input['image'] = $event->image;
+        }
+        $event->update($input);
+        return redirect()->route('events.index')->with('success', 'Event updated successfully');
     }
 }

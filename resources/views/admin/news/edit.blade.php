@@ -54,7 +54,12 @@
                                 @endif
                             </div>
                         </div>
-
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Date:</label>
+                                <input type="date" name="date" class="form-control" value="{{ $news->date }}">
+                            </div>
+                        </div>
                         <div class="col-sm-12 text-center my-3">
                             <button type="submit" class="btn btn-sm btn-primary">Update</button>
                         </div>

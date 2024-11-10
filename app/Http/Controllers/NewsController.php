@@ -42,6 +42,7 @@ class NewsController extends Controller
             'content' => 'required',
             'category_id' => 'nullable',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+            'date' => 'nullable|date',
         ]);
 
         $input = $request->all();
@@ -93,6 +94,7 @@ class NewsController extends Controller
             'content' => 'required',
             'category_id' => 'nullable',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+            'date' => 'nullable|date',
         ]);
         $input = $request->all();
         if ($image = $request->file('image')) {
