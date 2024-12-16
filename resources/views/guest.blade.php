@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     @include('layouts.header')
-    <section class="p-5 bg-white">
+    <section class="p-5 bg-white" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
             <div class="col-lg-6">
                 <h5 class="text-primary">Featured News</h5>
@@ -64,7 +64,7 @@
             </div>
         </div>
     </section>
-    <section class="p-5 bg-light">
+    <section class="p-5 bg-light" data-aos="fade-up" data-aos-duration="1000">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active text-uppercase" id="pills-news-tab" data-toggle="pill"
@@ -111,7 +111,8 @@
                         <div class="col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <div class="image-container-sm">
-                                    <img src="/image/{{ $e->image }}" class="card-img-top" alt="{{ $e->title }}">
+                                    <img src="/image/{{ $e->image }}" class="card-img-top"
+                                        alt="{{ $e->title }}">
                                 </div>
                                 <div class="card-body">
                                     <a href="{{ route('events.show', $e->id) }}">
@@ -135,7 +136,7 @@
             </div>
         </div>
     </section>
-    <section class="p-5 bg-white">
+    <section class="p-5 bg-white" data-aos="fade-up" data-aos-duration="1000">
         <h5 class="text-primary"><a href="{{ route('allads') }}">Advertisement</a></h5>
         <div class="row">
             @foreach ($ads as $a)
@@ -150,7 +151,7 @@
             @endforeach
         </div>
     </section>
-    <section class="bg-primary p-5 text-white">
+    <section class="bg-primary p-5 text-white" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
@@ -163,7 +164,7 @@
             </div>
         </div>
     </section>
-    <section class="container-fluid bg-white">
+    <section class="container-fluid bg-white" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
             <div class="col-md-6 my-3">
                 <div class="h-100 p-5 bg-light border rounded-3">
@@ -249,7 +250,7 @@
             </div>
         </div>
     </section>
-    <section class="container bg-light p-5">
+    <section class="container bg-light p-5" data-aos="fade-up" data-aos-duration="1000">
         <div class="row" style="height: 100%;">
             <div class="col-sm-6 d-flex flex-column">
                 <h5 class="text-primary">Our Top Notchers</h5>

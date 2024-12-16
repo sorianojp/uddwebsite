@@ -14,6 +14,7 @@
     <link rel="icon" href="{{ asset('images/logo.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     @yield('styles')
 </head>
 
@@ -38,6 +39,11 @@
     <script>
         const img = document.querySelector('#content-container p img');
         img.classList.add('img-fluid');
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS when the page loads
+        AOS.init();
     </script>
     @yield('scripts')
 </body>
