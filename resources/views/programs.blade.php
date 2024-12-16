@@ -3,14 +3,18 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-sm-12">
-                <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Program Offerings</h5>
+                <div class="d-flex justify-content-between text-uppercase bg-primary p-2 text-white rounded-lg">
+                    <div>Program Offerings</div>
+                    <div>Website</div>
+                </div>
                 <div class="accordion">
                     @foreach ($programs as $p)
-                        <div>
+                        <div class="d-flex justify-content-between">
                             <button class="btn btn-link text-left collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapse{{ $p->id }}">
                                 {{ $p->name }}
                             </button>
+                            <a href="{{ $p->website }}">{{ $p->website }}</a>
                         </div>
                         <div id="collapse{{ $p->id }}" class="collapse">
                             <div>
