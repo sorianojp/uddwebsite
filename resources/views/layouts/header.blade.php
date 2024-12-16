@@ -7,7 +7,9 @@
                 <h1>Universidad de Dagpan</h1>
                 <p class="lead">Dat Deus Et Laborant Homines</p>
                 <button type="button" class="btn btn-primary">Enroll Now</button>
-                <button type="button" class="btn btn-secondary">Our Programs</button>
+                <a href="{{ route('programs') }}">
+                    <button type="button" class="btn btn-secondary">Our Programs</button>
+                </a>
             </div>
         </div>
     </div>

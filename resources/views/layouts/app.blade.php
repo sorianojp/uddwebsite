@@ -14,77 +14,12 @@
     <link rel="icon" href="{{ asset('images/logo.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <style>
-        .image-container {
-            width: 100%;
-            /* Let the width auto-fit the container */
-            height: 400px;
-            /* Fixed height */
-            overflow: hidden;
-            /* Hide any overflow */
-        }
-
-        .image-container img {
-            width: 100%;
-            /* Make the image take up the full width */
-            height: 100%;
-            /* Fill the height (400px) */
-            object-fit: cover;
-            /* Ensure the image maintains its aspect ratio and crops if needed */
-        }
-
-        .image-container-sm {
-            width: 100%;
-            /* Let the width auto-fit the container */
-            height: 200px;
-            /* Fixed height */
-            overflow: hidden;
-            /* Hide any overflow */
-        }
-
-        .image-container-sm img {
-            width: 100%;
-            /* Make the image take up the full width */
-            height: 100%;
-            /* Fill the height (400px) */
-            object-fit: cover;
-            /* Ensure the image maintains its aspect ratio and crops if needed */
-        }
-
-        .image-container-xs {
-            width: 100%;
-            /* Let the width auto-fit the container */
-            height: 150px;
-            /* Fixed height */
-            overflow: hidden;
-            /* Hide any overflow */
-        }
-
-        .image-container-xs img {
-            width: 100%;
-            /* Make the image take up the full width */
-            height: 100%;
-            /* Fill the height (400px) */
-            object-fit: cover;
-            /* Ensure the image maintains its aspect ratio and crops if needed */
-        }
-
-        .content-container p a {
-            word-wrap: break-word;
-            word-break: break-all;
-        }
-
-
-        .content-container p img {
-            width: 100% !important;
-        }
-    </style>
     @yield('styles')
 </head>
 
 <body class="d-flex flex-column h-100">
     @include('layouts.nav')
-    <main class="flex-shrink-0">
+    <main class="mt-4">
         @yield('content')
     </main>
     @guest

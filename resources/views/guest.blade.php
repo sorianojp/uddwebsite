@@ -249,7 +249,7 @@
             </div>
         </div>
     </section>
-    <section class="container bg-light">
+    <section class="container bg-light p-5">
         <div class="row" style="height: 100%;">
             <div class="col-sm-6 d-flex flex-column">
                 <h5 class="text-primary">Our Top Notchers</h5>

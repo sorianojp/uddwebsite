@@ -20,9 +20,6 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('programs') }}">Program Offerings</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('allnews') }}">News</a>
                     </li>
                     <li class="nav-item">
