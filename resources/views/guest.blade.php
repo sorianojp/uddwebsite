@@ -7,7 +7,7 @@
                 <h5 class="text-primary">Featured News</h5>
                 <div class="row">
                     @foreach ($fnews as $fn)
-                        <div class="col-sm-12 col-md-8 col-lg-6 my-2">
+                        <div class="col-sm-12 col-md-8 col-lg-6 my-2" data-aos="zoom-in" data-aos-duration="1000">
                             <div class="card">
                                 <div class="image-container-xs">
                                     <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
@@ -37,7 +37,7 @@
                 <h5 class="text-primary">Featured Events</h5>
                 <div class="row">
                     @foreach ($fevents as $fe)
-                        <div class="col-sm-12 col-md-8 col-lg-6 my-2">
+                        <div class="col-sm-12 col-md-8 col-lg-6 my-2" data-aos="zoom-in" data-aos-duration="1000">
                             <div class="card">
                                 <div class="image-container-xs">
                                     <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
@@ -80,7 +80,7 @@
             <div class="tab-pane fade show active" id="pills-news" role="tabpanel" aria-labelledby="pills-news-tab">
                 <div class="row">
                     @foreach ($news as $n)
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="1000">
                             <div class="card">
                                 <div class="image-container-sm">
                                     <img src="/image/{{ $n->image }}" class="card-img-top" alt="{{ $n->title }}">
@@ -108,7 +108,7 @@
             <div class="tab-pane fade" id="pills-events" role="tabpanel" aria-labelledby="pills-events-tab">
                 <div class="row">
                     @foreach ($events as $e)
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="1000">
                             <div class="card">
                                 <div class="image-container-sm">
                                     <img src="/image/{{ $e->image }}" class="card-img-top"
@@ -140,7 +140,7 @@
         <h5 class="text-primary"><a href="{{ route('allads') }}">Advertisement</a></h5>
         <div class="row">
             @foreach ($ads as $a)
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="1000">
                     <div>
                         <img src="/image/{{ $a->image }}" class="img-fluid rounded-top">
                     </div>
@@ -154,7 +154,7 @@
     <section class="bg-primary p-5 text-white" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 text-center">
+                <div class="col-sm-12 text-center" data-aos="zoom-in" data-aos-duration="1000">
                     <h1>Choose UdD <br>Home of Topnotchers</h1>
                     <p>Over the past 36 years, Colegio de Dagupan has unarguably set the standards in providing quality
                         education to the people of Dagupan and its neighboring towns. it is dedicated to live by its mission
@@ -167,7 +167,7 @@
     <section class="container-fluid bg-white" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
             <div class="col-md-6 my-3">
-                <div class="h-100 p-5 bg-light border rounded-3">
+                <div class="h-100 p-5 bg-light border rounded-3" data-aos="zoom-in" data-aos-duration="1000">
                     <h5 class="text-uppercase">Philosophy</h5>
                     <p>The institution believes that through education, man's God-given gifts are discovered
                         and
@@ -175,7 +175,7 @@
                 </div>
             </div>
             <div class="col-md-6 my-3">
-                <div class="h-100 p-5 text-white bg-primary rounded-3">
+                <div class="h-100 p-5 text-white bg-primary rounded-3" data-aos="zoom-in" data-aos-duration="1000">
                     <h5 class="text-uppercase">Vision</h5>
                     <p>It envisions to create a community responsive to the challenges of the changing
                         world.
@@ -183,14 +183,15 @@
                 </div>
             </div>
             <div class="col-md-6 my-3">
-                <div class="h-100 p-5 bg-primary text-white border rounded-3">
+                <div class="h-100 p-5 bg-primary text-white border rounded-3" data-aos="zoom-in"
+                    data-aos-duration="1000">
                     <h5 class="text-uppercase">Mission</h5>
                     <p>It is tasked to prepare the individuals with the best that education can offer in a
                         manner that is consistent with the needs of society.</p>
                 </div>
             </div>
             <div class="col-md-6 my-3">
-                <div class="h-100 p-5 bg-light border rounded-3">
+                <div class="h-100 p-5 bg-light border rounded-3" data-aos="zoom-in" data-aos-duration="1000">
                     <h5 class="text-uppercase">Objectives</h5>
                     <ul>
                         <li>To inculcate critical thinking</li>
@@ -201,7 +202,7 @@
                 </div>
             </div>
             <div class="col-md-6 my-3">
-                <div class="h-100 p-5 bg-light border rounded-3">
+                <div class="h-100 p-5 bg-light border rounded-3" data-aos="zoom-in" data-aos-duration="1000">
                     <h5 class="text-uppercase">EOMS Policy</h5>
                     <p>
                         The Universidad de Dagupan shall be known as an educational institution that
@@ -226,7 +227,8 @@
                 </div>
             </div>
             <div class="col-md-6 my-3">
-                <div class="h-100 p-5 bg-primary text-white border rounded-3">
+                <div class="h-100 p-5 bg-primary text-white border rounded-3" data-aos="zoom-in"
+                    data-aos-duration="1000">
                     <h5 class="text-uppercase">Core Values</h5>
                     <p>
                         <span class="h4">C</span> - Competence
@@ -254,7 +256,8 @@
         <div class="row" style="height: 100%;">
             <div class="col-sm-6 d-flex flex-column">
                 <h5 class="text-primary">Our Top Notchers</h5>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="flex: 1;">
+                <div data-aos="zoom-in" data-aos-duration="1000" id="carouselExampleIndicators" class="carousel slide"
+                    data-ride="carousel" style="flex: 1;">
                     <ol class="carousel-indicators">
                         @foreach ($tops as $key => $t)
                             <li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}"
@@ -283,7 +286,8 @@
             </div>
             <div class="col-sm-6 d-flex flex-column">
                 <h5 class="text-primary">Our Location</h5>
-                <iframe width="100%" style="flex: 1; border: 0;" frameborder="0" scrolling="no"
+                <iframe data-aos="zoom-in" data-aos-duration="1000" width="100%" style="flex: 1; border: 0;"
+                    frameborder="0" scrolling="no"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.2829789828197!2d120.33868471492065!3d16.050798788892298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339167fd0100bfa3%3A0x392d5ed47cf7639e!2sColegio%20de%20Dagupan!5e0!3m2!1sen!2sph!4v1589948066111!5m2!1sen!2sph"
                     allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>

@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes(['register' => true]);
+Route::get('/contact-us', function () {
+    return view('contact-us');
+});
 // Auth::routes();
 Route::get('/', 'WelcomeController@welcome')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');

@@ -14,7 +14,7 @@
                                 data-target="#collapse{{ $p->id }}">
                                 {{ $p->name }}
                             </button>
-                            <a href="{{ $p->website }}">{{ $p->website }}</a>
+                            <a href="{{ $p->website }}">Go to Website</a>
                         </div>
                         <div id="collapse{{ $p->id }}" class="collapse">
                             <div>
