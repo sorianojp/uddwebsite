@@ -29,6 +29,12 @@
                                 <input type="text" name="name" class="form-control" placeholder="Name">
                             </div>
                         </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Website:</label>
+                                <input type="text" name="website" class="form-control" placeholder="Website">
+                            </div>
+                        </div>
                         <div class="col-sm-12 text-center">
                             <button type="submit" class="btn btn-primary">Create</button>
                         </div>
@@ -40,12 +46,14 @@
                     <tr>
                         <th>No</th>
                         <th>Name</th>
+                        <th>Website</th>
                         <th>Action</th>
                     </tr>
                     @foreach ($departments as $department)
                         <tr>
                             <td>{{ ++$i }}</td>
                             <td>{{ $department->name }}</td>
+                            <td><a href="{{ $department->website }}">{{ $department->website }}</a></td>
                             <td><a class="btn btn-sm btn-primary"
                                     href="{{ route('departments.courses.index', $department) }}">Courses</a></td>
                         </tr>

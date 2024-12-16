@@ -21,7 +21,8 @@ class DepartmentController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'website' => 'nullable'
         ]);
 
         Department::create($request->all());
