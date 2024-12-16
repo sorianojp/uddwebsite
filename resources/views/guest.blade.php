@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
     @include('layouts.header')
-    <section class="p-5">
+    <section class="p-5 bg-white">
         <div class="row">
             <div class="col-lg-6">
-                <h5 class="text-uppercase bg-secondary p-2 text-white rounded-lg">Featured News</h5>
+                <h5 class="text-primary">Featured News</h5>
                 <div class="row">
                     @foreach ($fnews as $fn)
                         <div class="col-sm-12 col-md-8 col-lg-6 my-2">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <h5 class="text-uppercase bg-secondary p-2 text-white rounded-lg">Featured Events</h5>
+                <h5 class="text-primary">Featured Events</h5>
                 <div class="row">
                     @foreach ($fevents as $fe)
                         <div class="col-sm-12 col-md-8 col-lg-6 my-2">
@@ -64,7 +64,7 @@
             </div>
         </div>
     </section>
-    <section class="p-5">
+    <section class="p-5 bg-light">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active text-uppercase" id="pills-news-tab" data-toggle="pill"
@@ -135,9 +135,8 @@
             </div>
         </div>
     </section>
-    <section class="p-5">
-        <h5 class="text-uppercase bg-secondary p-2 rounded-lg"><a href="{{ route('allads') }}"
-                class="text-white">Advertisement</a></h5>
+    <section class="p-5 bg-white">
+        <h5 class="text-primary"><a href="{{ route('allads') }}">Advertisement</a></h5>
         <div class="row">
             @foreach ($ads as $a)
                 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -164,7 +163,7 @@
             </div>
         </div>
     </section>
-    <section class="container-fluid bg-light">
+    <section class="container-fluid bg-white">
         <div class="row">
             <div class="col-md-6 my-3">
                 <div class="h-100 p-5 bg-light border rounded-3">
@@ -253,7 +252,7 @@
     <section class="container bg-light">
         <div class="row" style="height: 100%;">
             <div class="col-sm-6 d-flex flex-column">
-                <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Our Top Notchers</h5>
+                <h5 class="text-primary">Our Top Notchers</h5>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="flex: 1;">
                     <ol class="carousel-indicators">
                         @foreach ($tops as $key => $t)
@@ -282,7 +281,7 @@
                 </div>
             </div>
             <div class="col-sm-6 d-flex flex-column">
-                <h5 class="text-uppercase bg-primary p-2 text-white rounded-lg">Our Location</h5>
+                <h5 class="text-primary">Our Location</h5>
                 <iframe width="100%" style="flex: 1; border: 0;" frameborder="0" scrolling="no"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.2829789828197!2d120.33868471492065!3d16.050798788892298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339167fd0100bfa3%3A0x392d5ed47cf7639e!2sColegio%20de%20Dagupan!5e0!3m2!1sen!2sph!4v1589948066111!5m2!1sen!2sph"
                     allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

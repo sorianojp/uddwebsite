@@ -1,11 +1,13 @@
-<header>
-    <!-- The header content -->
-    <div class="container-fluid h-100 bg-primary py-5">
-        <div class="d-flex h-100 text-center align-items-center">
-            <div class="w-100 text-white">
+<!-- Full Page Image Header with Vertically Centered Content -->
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-sm-12 text-center">
                 <img class="img-fluid" src="{{ asset('images/logo.png') }}" width="150px">
-                <h1 class="display-5">Universidad de Dagupan</h1>
-                <p class="lead mb-0">Dat Deus Et Laborant Homines</p>
+                <h1>Universidad de Dagpan</h1>
+                <p class="lead">Dat Deus Et Laborant Homines</p>
+                <button type="button" class="btn btn-primary">Enroll Now</button>
+                <button type="button" class="btn btn-secondary">Our Programs</button>
             </div>
         </div>
     </div>
