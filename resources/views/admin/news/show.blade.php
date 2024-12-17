@@ -24,7 +24,8 @@
                     </div>
                     <div>
                         <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $news->id)) }}"
-                            target="_blank">
+                            target="_blank"
+                            onclick="window.open(this.href, 'facebook-share-dialog', 'width=800,height=600'); return false;">
                             <i class="bi bi-facebook h2"></i>
                         </a>
                     </div>
@@ -32,12 +33,6 @@
                 <div>
                     <img src="/image/{{ $news->image }}" class="img-fluid">
                 </div>
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $news->id)) }}"
-                    target="_blank"
-                    onclick="window.open(this.href, 'facebook-share-dialog', 'width=800,height=600'); return false;">
-                    <i class="bi bi-facebook h2"></i>
-                </a>
-
                 <div class="text-justify content-container">{!! $news->content !!}</div>
             </div>
         </div>
