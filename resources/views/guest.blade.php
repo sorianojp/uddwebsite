@@ -20,13 +20,8 @@
                                         <span class="badge badge-secondary">{{ $fn->category->name ?? 'N/A' }}</span>
                                     </a>
                                 </div>
-                                <div
-                                    class="card-footer bg-primary text-white d-flex justify-content-between align-items-center">
+                                <div class="card-footer bg-primary text-white">
                                     <span>{{ $fn->date ? \Carbon\Carbon::parse($fn->date)->format('F j, Y') : \Carbon\Carbon::parse($fn->created_at)->format('F j, Y') }}</span>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $fn->id)) }}"
-                                        target="_blank" class="text-white">
-                                        <i class="bi bi-facebook h3"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -50,12 +45,8 @@
                                         <span class="badge badge-secondary">{{ $fe->category->name ?? 'N/A' }}</span>
                                     </a>
                                 </div>
-                                <div class="card-footer bg-primary text-white d-flex justify-content-between">
+                                <div class="card-footer bg-primary text-white">
                                     <span>{{ $fe->date ? \Carbon\Carbon::parse($fe->date)->format('F j, Y') : \Carbon\Carbon::parse($fe->created_at)->format('F j, Y') }}</span>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $fe->id)) }}"
-                                        target="_blank" class="text-white">
-                                        <i class="bi bi-facebook h3"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -93,12 +84,8 @@
                                         <span class="badge badge-secondary">{{ $n->category->name ?? 'N/A' }}</span>
                                     </a>
                                 </div>
-                                <div class="card-footer bg-primary text-white d-flex justify-content-between">
+                                <div class="card-footer bg-primary text-white">
                                     <span>{{ $n->date ? \Carbon\Carbon::parse($n->date)->format('F j, Y') : \Carbon\Carbon::parse($n->created_at)->format('F j, Y') }}</span>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $n->id)) }}"
-                                        target="_blank" class="text-white">
-                                        <i class="bi bi-facebook h3"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -111,8 +98,7 @@
                         <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-duration="1000">
                             <div class="card">
                                 <div class="image-container-sm">
-                                    <img src="/image/{{ $e->image }}" class="card-img-top"
-                                        alt="{{ $e->title }}">
+                                    <img src="/image/{{ $e->image }}" class="card-img-top" alt="{{ $e->title }}">
                                 </div>
                                 <div class="card-body">
                                     <a href="{{ route('events.show', $e->id) }}">
@@ -122,12 +108,8 @@
                                         <span class="badge badge-secondary">{{ $e->category->name ?? 'N/A' }}</span>
                                     </a>
                                 </div>
-                                <div class="card-footer bg-primary text-white d-flex justify-content-between">
+                                <div class="card-footer bg-primary text-white">
                                     <span>{{ $e->date }}</span>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('events.show', $e->id)) }}"
-                                        target="_blank">
-                                        <i class="bi bi-facebook h3"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -29,7 +29,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="image-container">
+                <div>
                     <img src="/image/{{ $news->image }}" class="img-fluid">
                 </div>
                 <div class="text-justify content-container">{!! $news->content !!}</div>
