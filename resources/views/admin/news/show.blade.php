@@ -34,6 +34,7 @@
                 </div>
                 <!-- Facebook Share Button -->
                 <div class="fb-share-button" data-href="{{ route('news.show', $news->id) }}" data-layout="button_count">
+                    sha
                 </div>
                 <div class="text-justify content-container">{!! $news->content !!}</div>
             </div>
