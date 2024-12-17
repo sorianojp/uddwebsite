@@ -34,7 +34,7 @@
                         nonce="YOUR_NONCE"></script>
 
                     <div class="fb-share-button" data-href="{{ route('news.show', $news->id) }}"
-                        data-layout="button_count"></div>
+                        data-layout="button_count">SH</div>
                 </div>
                 <div>
                     <img src="/image/{{ $news->image }}" class="img-fluid">
