@@ -28,13 +28,6 @@
                             <i class="bi bi-facebook h2"></i>
                         </a>
                     </div>
-                    <div id="fb-root"></div>
-                    <script async defer crossorigin="anonymous"
-                        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0&appId=YOUR_APP_ID&autoLogAppEvents=1"
-                        nonce="YOUR_NONCE"></script>
-
-                    <div class="fb-share-button" data-href="{{ route('news.show', $news->id) }}"
-                        data-layout="button_count">SH</div>
                 </div>
                 <div>
                     <img src="/image/{{ $news->image }}" class="img-fluid">
