@@ -34,10 +34,11 @@
                     <img src="/image/{{ $news->image }}" class="img-fluid">
                 </div>
                 <div class="text-justify content-container">{!! $news->content !!}</div>
-                <a href="fb://facewebmodal/f?href={{ urlencode(route('news.show', $news->id)) }}" target="_blank">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.show', $news->id)) }}"
+                    target="_blank"
+                    onclick="openFacebookApp('{{ urlencode(route('news.show', $news->id)) }}'); return false;">
                     <i class="bi bi-facebook h2"></i>
                 </a>
-
             </div>
         </div>
     </div>
