@@ -3,7 +3,7 @@
     <!-- Open Graph meta tags for Facebook sharing -->
     <meta property="og:title" content="{{ $news->title }}" />
     <meta property="og:description" content="{{ Str::limit(strip_tags($news->content), 150) }}" />
-    <meta property="og:image" content="{{ asset('image/' . $news->image) }}" />
+    <meta property="og:image" content="/image/{{ $news->image }}" />
     <meta property="og:url" content="{{ route('news.show', $news->id) }}" />
     <meta property="og:type" content="article" />
 @endsection
