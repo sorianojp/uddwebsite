@@ -46,20 +46,6 @@
         AOS.init();
     </script>
     @yield('scripts')
-    <script>
-        function openFacebookApp(shareUrl) {
-            // Try to open Facebook app
-            var appUrl = 'fb://facewebmodal/f?href=' + shareUrl;
-            var win = window.open(appUrl, '_blank');
-
-            // If Facebook app does not open within 2 seconds, fallback to web
-            setTimeout(function() {
-                if (!win || win.closed || typeof win.closed == 'undefined') {
-                    window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareUrl, '_blank');
-                }
-            }, 2000);
-        }
-    </script>
 </body>
 
 </html>
