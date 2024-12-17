@@ -34,6 +34,10 @@
                     <img src="/image/{{ $news->image }}" class="img-fluid">
                 </div>
                 <div class="text-justify content-container">{!! $news->content !!}</div>
+                <a href="fb://facewebmodal/f?href={{ urlencode(route('news.show', $news->id)) }}" target="_blank">
+                    <i class="bi bi-facebook h2"></i>
+                </a>
+
             </div>
         </div>
     </div>
