@@ -20,7 +20,7 @@
 
 <body class="d-flex flex-column h-100">
     @include('layouts.nav')
-    <main class="mt-4">
+    <main class="my-4">
         @yield('content')
     </main>
     @guest

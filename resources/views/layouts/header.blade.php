@@ -6,7 +6,7 @@
                 <img data-aos-duration="2000" data-aos="zoom-in" class="img-fluid " src="{{ asset('images/logo.png') }}"
                     width="150px">
                 <div data-aos="fade-up" data-aos-duration="2000">
-                    <h1>Universidad de Dagpan</h1>
+                    <h1>Universidad de Dagupan</h1>
                     <p class="lead">Dat Deus Et Laborant Homines</p>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="2000">
