@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Universidad de Dagupan') }}</title>
+    <meta name="description"
+        content="From Computronix College to Colegio de Dagupan to Universidad de Dagupan, we are proud to be the first ISO 21001:2018 certified university in Region 1.">
+    <meta name="keywords"
+        content="Computronix College, Colegio de Dagupan, Universidad de Dagupan, ISO 21001:2018 Certified, First ISO Certified University in Region 1, Quality Education, Higher Education in Dagupan, Accredited University in Region 1">
+    <title>{{ 'Universidad de Dagupan | Formerly Colegio de Dagupan' }}</title>
     @yield('head')
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

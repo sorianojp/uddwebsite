@@ -7,7 +7,8 @@
                     width="150px">
                 <div data-aos="fade-up" data-aos-duration="2000">
                     <h1>Universidad de Dagupan</h1>
-                    <p class="lead">Dat Deus Et Laborant Homines</p>
+                    <p class="lead">Formerly Colegio de Dagupan</p>
+                    <p class="lead">ISO 21001:2018 Certified | First ISO Certified University in Region 1</p>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="2000">
                     <a href="/contact-us">
