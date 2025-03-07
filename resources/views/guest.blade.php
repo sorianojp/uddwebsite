@@ -1,60 +1,6 @@
 @extends('layouts.app')
 @section('content')
     @include('layouts.header')
-    <section class="p-5 bg-white" data-aos="fade-up" data-aos-duration="1000">
-        <div class="row">
-            <div class="col-lg-6">
-                <h5 class="text-primary">Featured News</h5>
-                <div class="row">
-                    @foreach ($fnews as $fn)
-                        <div class="col-sm-12 col-md-8 col-lg-6 my-2" data-aos="zoom-in" data-aos-duration="1000">
-                            <div class="card">
-                                <div class="image-container-xs">
-                                    <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
-                                </div>
-                                <div class="card-body">
-                                    <a href="{{ route('news.show', $fn->id) }}">
-                                        <h5 class="card-title text-truncate">{{ $fn->title }}</h5>
-                                    </a>
-                                    <a href="{{ $fn->category ? route('sdgs.show', $fn->category->id) : '#' }}">
-                                        <span class="badge badge-secondary">{{ $fn->category->name ?? 'N/A' }}</span>
-                                    </a>
-                                </div>
-                                <div class="card-footer bg-primary text-white">
-                                    <span>{{ $fn->date ? \Carbon\Carbon::parse($fn->date)->format('F j, Y') : \Carbon\Carbon::parse($fn->created_at)->format('F j, Y') }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <h5 class="text-primary">Featured Events</h5>
-                <div class="row">
-                    @foreach ($fevents as $fe)
-                        <div class="col-sm-12 col-md-8 col-lg-6 my-2" data-aos="zoom-in" data-aos-duration="1000">
-                            <div class="card">
-                                <div class="image-container-xs">
-                                    <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
-                                </div>
-                                <div class="card-body">
-                                    <a href="{{ route('events.show', $fe->id) }}">
-                                        <h5 class="card-title text-truncate">{{ $fe->title }}</h5>
-                                    </a>
-                                    <a href="{{ $fe->category ? route('sdgs.show', $fe->category->id) : '#' }}">
-                                        <span class="badge badge-secondary">{{ $fe->category->name ?? 'N/A' }}</span>
-                                    </a>
-                                </div>
-                                <div class="card-footer bg-primary text-white">
-                                    <span>{{ $fe->date ? \Carbon\Carbon::parse($fe->date)->format('F j, Y') : \Carbon\Carbon::parse($fe->created_at)->format('F j, Y') }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="p-5 bg-light" data-aos="fade-up" data-aos-duration="1000">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -110,6 +56,60 @@
                                 </div>
                                 <div class="card-footer bg-primary text-white">
                                     <span>{{ $e->date }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="p-5 bg-white" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+            <div class="col-lg-6">
+                <h5 class="text-primary">Featured News</h5>
+                <div class="row">
+                    @foreach ($fnews as $fn)
+                        <div class="col-sm-12 col-md-8 col-lg-6 my-2" data-aos="zoom-in" data-aos-duration="1000">
+                            <div class="card">
+                                <div class="image-container-xs">
+                                    <img src="/image/{{ $fn->image }}" class="card-img-top" alt="{{ $fn->title }}">
+                                </div>
+                                <div class="card-body">
+                                    <a href="{{ route('news.show', $fn->id) }}">
+                                        <h5 class="card-title text-truncate">{{ $fn->title }}</h5>
+                                    </a>
+                                    <a href="{{ $fn->category ? route('sdgs.show', $fn->category->id) : '#' }}">
+                                        <span class="badge badge-secondary">{{ $fn->category->name ?? 'N/A' }}</span>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-primary text-white">
+                                    <span>{{ $fn->date ? \Carbon\Carbon::parse($fn->date)->format('F j, Y') : \Carbon\Carbon::parse($fn->created_at)->format('F j, Y') }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h5 class="text-primary">Featured Events</h5>
+                <div class="row">
+                    @foreach ($fevents as $fe)
+                        <div class="col-sm-12 col-md-8 col-lg-6 my-2" data-aos="zoom-in" data-aos-duration="1000">
+                            <div class="card">
+                                <div class="image-container-xs">
+                                    <img src="/image/{{ $fe->image }}" class="card-img-top" alt="{{ $fe->title }}">
+                                </div>
+                                <div class="card-body">
+                                    <a href="{{ route('events.show', $fe->id) }}">
+                                        <h5 class="card-title text-truncate">{{ $fe->title }}</h5>
+                                    </a>
+                                    <a href="{{ $fe->category ? route('sdgs.show', $fe->category->id) : '#' }}">
+                                        <span class="badge badge-secondary">{{ $fe->category->name ?? 'N/A' }}</span>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-primary text-white">
+                                    <span>{{ $fe->date ? \Carbon\Carbon::parse($fe->date)->format('F j, Y') : \Carbon\Carbon::parse($fe->created_at)->format('F j, Y') }}</span>
                                 </div>
                             </div>
                         </div>
